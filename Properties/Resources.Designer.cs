@@ -70,6 +70,15 @@ namespace SerialPortApp.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a COM1.
+        /// </summary>
+        internal static string BALANZA_PROPERTY_CommPort {
+            get {
+                return ResourceManager.GetString("BALANZA.PROPERTY_CommPort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a 7.
         /// </summary>
         internal static string BALANZA_PROPERTY_DataBits {

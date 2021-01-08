@@ -120,6 +120,9 @@
   <data name="BALANZA.PROPERTY_BaudRate" xml:space="preserve">
     <value>9600</value>
   </data>
+  <data name="BALANZA.PROPERTY_CommPort" xml:space="preserve">
+    <value>COM1</value>
+  </data>
   <data name="BALANZA.PROPERTY_DataBits" xml:space="preserve">
     <value>7</value>
   </data>
