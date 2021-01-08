@@ -42,8 +42,9 @@ namespace SerialPortApp
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.TXT_PAR_INSTANCESQL = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TXT_BAL_OUTPUTSTRING = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.TXT_BAL_RECEIVEBYTES = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.TXT_BAL_HANDSHAKE = new System.Windows.Forms.TextBox();
@@ -99,6 +100,7 @@ namespace SerialPortApp
             this.LBL_RECORDS = new System.Windows.Forms.Label();
             this.BOT_PRINT_LABEL = new System.Windows.Forms.Button();
             this.chk_anulados = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.TAB_DATA.SuspendLayout();
             this.TAB_PARAMETERS.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -119,6 +121,7 @@ namespace SerialPortApp
             // 
             // TAB_PARAMETERS
             // 
+            this.TAB_PARAMETERS.Controls.Add(this.label13);
             this.TAB_PARAMETERS.Controls.Add(this.label18);
             this.TAB_PARAMETERS.Controls.Add(this.TXT_PAR_PORT_TCPIP);
             this.TAB_PARAMETERS.Controls.Add(this.label17);
@@ -129,7 +132,6 @@ namespace SerialPortApp
             this.TAB_PARAMETERS.Controls.Add(this.label15);
             this.TAB_PARAMETERS.Controls.Add(this.label14);
             this.TAB_PARAMETERS.Controls.Add(this.TXT_PAR_INSTANCESQL);
-            this.TAB_PARAMETERS.Controls.Add(this.label13);
             this.TAB_PARAMETERS.Location = new System.Drawing.Point(4, 22);
             this.TAB_PARAMETERS.Name = "TAB_PARAMETERS";
             this.TAB_PARAMETERS.Padding = new System.Windows.Forms.Padding(3);
@@ -223,20 +225,10 @@ namespace SerialPortApp
             this.TXT_PAR_INSTANCESQL.Size = new System.Drawing.Size(198, 20);
             this.TXT_PAR_INSTANCESQL.TabIndex = 1;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(98, 3);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(164, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Conexion de Base de Datos";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.TXT_BAL_OUTPUTSTRING);
+            this.tabPage2.Controls.Add(this.label25);
             this.tabPage2.Controls.Add(this.TXT_BAL_RECEIVEBYTES);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.TXT_BAL_HANDSHAKE);
@@ -257,6 +249,23 @@ namespace SerialPortApp
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "BALANZAS";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // TXT_BAL_OUTPUTSTRING
+            // 
+            this.TXT_BAL_OUTPUTSTRING.Location = new System.Drawing.Point(161, 203);
+            this.TXT_BAL_OUTPUTSTRING.Name = "TXT_BAL_OUTPUTSTRING";
+            this.TXT_BAL_OUTPUTSTRING.ReadOnly = true;
+            this.TXT_BAL_OUTPUTSTRING.Size = new System.Drawing.Size(161, 20);
+            this.TXT_BAL_OUTPUTSTRING.TabIndex = 31;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(20, 206);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(72, 13);
+            this.label25.TabIndex = 30;
+            this.label25.Text = "Salida String :";
             // 
             // TXT_BAL_RECEIVEBYTES
             // 
@@ -362,14 +371,13 @@ namespace SerialPortApp
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(6, 13);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(320, 13);
+            this.label19.Size = new System.Drawing.Size(320, 31);
             this.label19.TabIndex = 17;
-            this.label19.Text = "PARAMETROS DE COMUNICACION DE LA BALANZA :";
+            this.label19.Text = "PARAMETROS DE COMUNICACION DE LA BALANZA POR DEFACTO :";
             // 
             // tabPage3
             // 
@@ -785,6 +793,16 @@ namespace SerialPortApp
             this.chk_anulados.Text = "Ticket Anulado ";
             this.chk_anulados.UseVisualStyleBackColor = true;
             // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(7, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(320, 31);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "PARAMETROS DE CONEXION A LA BASE DE DATOS SQL-SERVER :";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -891,7 +909,6 @@ namespace SerialPortApp
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox TXT_PAR_INSTANCESQL;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox TXT_PAR_PORT_TCPIP;
         private System.Windows.Forms.TextBox TXT_BAL_RECEIVEBYTES;
@@ -907,6 +924,9 @@ namespace SerialPortApp
         private System.Windows.Forms.TextBox TXT_BAL_BAUDRATE;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox TXT_BAL_OUTPUTSTRING;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label13;
     }
 }
 

@@ -115,6 +115,15 @@ namespace SerialPortApp.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &quot;$3463//2323//45.12kg//&quot;.
+        /// </summary>
+        internal static string BALANZA_PROPERTY_StringOutputDevice {
+            get {
+                return ResourceManager.GetString("BALANZA.PROPERTY_StringOutputDevice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a DBLinkData.
         /// </summary>
         internal static string DATABASE_NAME_DEFAULT {

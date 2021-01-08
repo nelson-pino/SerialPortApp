@@ -135,6 +135,9 @@
   <data name="BALANZA.PROPERTY_StopBits" xml:space="preserve">
     <value>Space</value>
   </data>
+  <data name="BALANZA.PROPERTY_StringOutputDevice" xml:space="preserve">
+    <value>"$3463//2323//45.12kg//"</value>
+  </data>
   <data name="DATABASE_NAME_DEFAULT" xml:space="preserve">
     <value>DBLinkData</value>
   </data>
