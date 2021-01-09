@@ -141,6 +141,9 @@
   <data name="BALANZA.PROPERTY_StringOutputDevice" xml:space="preserve">
     <value>"$3463//2323//45.12kg//"</value>
   </data>
+  <data name="CONNECTION_STRING_SQLSERVER" xml:space="preserve">
+    <value>Data Source=DESKTOP-5KS860E\SQLEXPRESS;Initial Catalog=DbSerialPortApp;User Id=sa;Password=Jossycar5%</value>
+  </data>
   <data name="DATABASE_NAME_DEFAULT" xml:space="preserve">
     <value>DBLinkData</value>
   </data>

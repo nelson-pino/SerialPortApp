@@ -17,7 +17,6 @@ namespace SerialPortApp
         string InputData = string.Empty;
 
         Char[] CharBuffer = new Char[50];
-        Int32 count;
 
         public Main()
         {

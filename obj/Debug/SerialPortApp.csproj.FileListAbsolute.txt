@@ -8,3 +8,9 @@ C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csproj.Gene
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csproj.CoreCompileInputs.cache
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.exe
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.pdb
+C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\EntityFramework.dll
+C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\EntityFramework.xml
+C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csproj.CopyComplete
+C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Migrations.InitialMigration.resources

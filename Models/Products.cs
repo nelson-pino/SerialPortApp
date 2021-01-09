@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SerialPortApp.Models
+﻿namespace SerialPortApp.Models
 {
+    using System.ComponentModel.DataAnnotations;
     public class Products
     {
-        public int ProductId { get; set; }
+        [Key]
+        public int ProductID{ get; set; }
         public string ProductName { get; set; }
         public string ProductCategory { get; set; }
         public string Departament { get; set; }

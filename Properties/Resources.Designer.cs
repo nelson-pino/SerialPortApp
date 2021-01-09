@@ -133,6 +133,15 @@ namespace SerialPortApp.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Data Source=DESKTOP-5KS860E\SQLEXPRESS;Initial Catalog=DbSerialPortApp;User Id=sa;Password=Jossycar5%.
+        /// </summary>
+        internal static string CONNECTION_STRING_SQLSERVER {
+            get {
+                return ResourceManager.GetString("CONNECTION_STRING_SQLSERVER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a DBLinkData.
         /// </summary>
         internal static string DATABASE_NAME_DEFAULT {
