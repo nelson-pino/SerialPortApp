@@ -69,6 +69,9 @@ namespace SerialPortApp
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.LINK_PRO_GUARDAR = new System.Windows.Forms.LinkLabel();
+            this.TXT_PRO_UNITSHOP = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.CHK_PRODUCT_ANULADO = new System.Windows.Forms.CheckBox();
             this.TXT_PRO_INGREDIENTS = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
@@ -136,9 +139,6 @@ namespace SerialPortApp
             this.label28 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.TXT_PRO_UNITSHOP = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.LINK_PRO_GUARDAR = new System.Windows.Forms.LinkLabel();
             this.TAB_DATA.SuspendLayout();
             this.TAB_PARAMETERS.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -537,7 +537,34 @@ namespace SerialPortApp
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "PRODUCTOS";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.TabPage1_Click);
+            // 
+            // LINK_PRO_GUARDAR
+            // 
+            this.LINK_PRO_GUARDAR.AutoSize = true;
+            this.LINK_PRO_GUARDAR.Location = new System.Drawing.Point(56, 34);
+            this.LINK_PRO_GUARDAR.Name = "LINK_PRO_GUARDAR";
+            this.LINK_PRO_GUARDAR.Size = new System.Drawing.Size(39, 13);
+            this.LINK_PRO_GUARDAR.TabIndex = 54;
+            this.LINK_PRO_GUARDAR.TabStop = true;
+            this.LINK_PRO_GUARDAR.Text = "Grabar";
+            this.LINK_PRO_GUARDAR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_PRO_GUARDAR_LinkClicked);
+            // 
+            // TXT_PRO_UNITSHOP
+            // 
+            this.TXT_PRO_UNITSHOP.Location = new System.Drawing.Point(148, 163);
+            this.TXT_PRO_UNITSHOP.Name = "TXT_PRO_UNITSHOP";
+            this.TXT_PRO_UNITSHOP.ReadOnly = true;
+            this.TXT_PRO_UNITSHOP.Size = new System.Drawing.Size(161, 20);
+            this.TXT_PRO_UNITSHOP.TabIndex = 53;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(7, 166);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(78, 13);
+            this.label38.TabIndex = 52;
+            this.label38.Text = "Unidad Venta :";
             // 
             // CHK_PRODUCT_ANULADO
             // 
@@ -603,6 +630,7 @@ namespace SerialPortApp
             this.LINK_PRO_UPDATE.TabIndex = 45;
             this.LINK_PRO_UPDATE.TabStop = true;
             this.LINK_PRO_UPDATE.Text = "Modificar";
+            this.LINK_PRO_UPDATE.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_PRO_UPDATE_LinkClicked);
             // 
             // LINK_PRO_AGREGAR
             // 
@@ -673,7 +701,6 @@ namespace SerialPortApp
             this.TXT_PRO_PRODUCT_NAME.ReadOnly = true;
             this.TXT_PRO_PRODUCT_NAME.Size = new System.Drawing.Size(161, 20);
             this.TXT_PRO_PRODUCT_NAME.TabIndex = 37;
-            this.TXT_PRO_PRODUCT_NAME.TextChanged += new System.EventHandler(this.TextBox4_TextChanged);
             // 
             // label32
             // 
@@ -1174,34 +1201,6 @@ namespace SerialPortApp
             this.label29.Size = new System.Drawing.Size(80, 13);
             this.label29.TabIndex = 35;
             this.label29.Text = "Total a Pagar  :";
-            // 
-            // TXT_PRO_UNITSHOP
-            // 
-            this.TXT_PRO_UNITSHOP.Location = new System.Drawing.Point(148, 163);
-            this.TXT_PRO_UNITSHOP.Name = "TXT_PRO_UNITSHOP";
-            this.TXT_PRO_UNITSHOP.ReadOnly = true;
-            this.TXT_PRO_UNITSHOP.Size = new System.Drawing.Size(161, 20);
-            this.TXT_PRO_UNITSHOP.TabIndex = 53;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(7, 166);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(78, 13);
-            this.label38.TabIndex = 52;
-            this.label38.Text = "Unidad Venta :";
-            // 
-            // LINK_PRO_GUARDAR
-            // 
-            this.LINK_PRO_GUARDAR.AutoSize = true;
-            this.LINK_PRO_GUARDAR.Location = new System.Drawing.Point(56, 34);
-            this.LINK_PRO_GUARDAR.Name = "LINK_PRO_GUARDAR";
-            this.LINK_PRO_GUARDAR.Size = new System.Drawing.Size(39, 13);
-            this.LINK_PRO_GUARDAR.TabIndex = 54;
-            this.LINK_PRO_GUARDAR.TabStop = true;
-            this.LINK_PRO_GUARDAR.Text = "Grabar";
-            this.LINK_PRO_GUARDAR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_PRO_GUARDAR_LinkClicked);
             // 
             // Main
             // 

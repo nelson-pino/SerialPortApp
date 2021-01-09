@@ -4,8 +4,9 @@
     public class Products
     {
         [Key]
-        public string ProductID{ get; set; }
+        public int ProductID{ get; set; }
         [Required]
+        public string CodePersonolize { get; set; }
         public string ProductName { get; set; }
         [Required]
         public string ProductCategory { get; set; }

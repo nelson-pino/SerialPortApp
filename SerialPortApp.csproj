@@ -64,13 +64,9 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101090448088_Initial-Migration.cs" />
-    <Compile Include="Migrations\202101090448088_Initial-Migration.designer.cs">
-      <DependentUpon>202101090448088_Initial-Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101091551003_jobsproducts.cs" />
-    <Compile Include="Migrations\202101091551003_jobsproducts.designer.cs">
-      <DependentUpon>202101091551003_jobsproducts.cs</DependentUpon>
+    <Compile Include="Migrations\202101091910507_cambios-productos.cs" />
+    <Compile Include="Migrations\202101091910507_cambios-productos.designer.cs">
+      <DependentUpon>202101091910507_cambios-productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Products.cs" />
@@ -80,11 +76,8 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101090448088_Initial-Migration.resx">
-      <DependentUpon>202101090448088_Initial-Migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101091551003_jobsproducts.resx">
-      <DependentUpon>202101091551003_jobsproducts.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101091910507_cambios-productos.resx">
+      <DependentUpon>202101091910507_cambios-productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

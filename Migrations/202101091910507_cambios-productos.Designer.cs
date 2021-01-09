@@ -7,13 +7,13 @@ namespace SerialPortApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitialMigration : IMigrationMetadata
+    public sealed partial class cambiosproductos : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(cambiosproductos));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101090448088_Initial-Migration"; }
+            get { return "202101091910507_cambios-productos"; }
         }
         
         string IMigrationMetadata.Source
