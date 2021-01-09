@@ -15,7 +15,7 @@
         public string Operador { get; set; }
         public int NumeroLote { get; set; }
         public string  NumeroCodeBar { get; set; }
-        public string comentario { get; set; }
+        public string Message { get; set; }
         public decimal UnitPrice { get; set; }
         public int TotalPrice { get; set; }
         public string Ubicacion { get; set; }

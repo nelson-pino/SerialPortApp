@@ -14,3 +14,4 @@ C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\EntityFramework.xml
 C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csproj.CopyComplete
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Migrations.InitialMigration.resources
+C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Migrations.jobsproducts.resources

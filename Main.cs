@@ -1,22 +1,25 @@
-﻿using System;
-using System.Windows.Forms;
-using System.IO.Ports;
-using SerialPortApp.Models;
-    
-
-namespace SerialPortApp
+﻿namespace SerialPortApp
 {
+    using System;
+    using System.Windows.Forms;
+    using System.IO.Ports;
+    using SerialPortApp.Models;
+    using SerialPortApp.Controlers;
+
     public partial class Main : Form
     {
-        SerialPort CommPort = new SerialPort();
+        readonly SerialPort CommPort = new SerialPort();
 
         internal delegate void SerialDataReceivedEventHanderDelegate
         (object sender, SerialDataReceivedEventArgs e);
 
         delegate void SetTextCallBack(string text);
-        string InputData = string.Empty;
 
-        Char[] CharBuffer = new Char[50];
+        readonly string InputData = string.Empty;
+        readonly Char[] CharBuffer = new Char[50];
+
+        // Intanciar los controler de mis entidades.
+        readonly ProductsController prodductscontroller = new ProductsController();
 
         public Main()
         {
@@ -70,6 +73,18 @@ namespace SerialPortApp
             TXT_BAL_OUTPUTSTRING.Text = Properties.Resources.BALANZA_PROPERTY_StringOutputDevice;
             TXT__BAL_COMM_PORT.Text = Properties.Resources.BALANZA_PROPERTY_CommPort;
         }
+        private void SetStatusTextboxProducts(bool sw) 
+        {
+            TXT_PRO_PRODUCTID.ReadOnly = sw;
+            TXT_PRO_PRODUCT_NAME.ReadOnly = sw;
+            TXT_PRO_CATEGORY.ReadOnly = sw;
+            TXT_PRO_DEPARTAMENT.ReadOnly = sw;
+            TXT_PRO_INGREDIENTS.ReadOnly = sw;
+            TXT_PRO_TAX.ReadOnly = sw;
+            TXT_PRO_UNITPRICE.ReadOnly = sw;
+            TXT_PRO_UNITSHOP.ReadOnly = sw;
+            TXT_PRO_PRODUCTID.Focus();
+        }
         private void GetDataPortSerialComm(object sender, SerialDataReceivedEventArgs e)
         {
             CommPort.Read(CharBuffer, 1, 49);
@@ -93,8 +108,37 @@ namespace SerialPortApp
             CommPort.Open();
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void TabPage1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LINK_PRO_AGREGAR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SetStatusTextboxProducts(false);
+        }
+
+        private void LINK_PRO_GUARDAR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            Products producto = new Products
+            {
+                ProductID = TXT_PRO_PRODUCTID.Text,
+                ProductName = TXT_PRO_PRODUCT_NAME.Text,
+                ProductCategory = TXT_PRO_CATEGORY.Text,
+                Departament = TXT_PRO_DEPARTAMENT.Text,
+                UnitPrice = Convert.ToDecimal(TXT_PRO_UNITPRICE.Text),
+                UnitShop = TXT_PRO_UNITSHOP.Text,
+                Ingredients = TXT_PRO_INGREDIENTS.Text,
+                Tax = Convert.ToDecimal(TXT_PRO_TAX.Text)
+            };
+            prodductscontroller.Add(producto);
+
 
         }
     }
