@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO.Ports;
+using SerialPortApp.Models;
+    
 
 namespace SerialPortApp
 {
@@ -26,6 +28,22 @@ namespace SerialPortApp
         private void Main_Load(object sender, EventArgs e)
         {
             LoadParameters();
+            ConfigObjectSerialPortComm();
+
+           
+
+
+
+        }
+        private void ConfigObjectSerialPortComm() 
+        {
+            // Crear el Objeto SerialPort.
+            CommPort.PortName = "COM2";
+            CommPort.BaudRate = Convert.ToInt32(TXT_BAL_BAUDRATE.Text);
+            CommPort.StopBits = StopBits.One;
+            CommPort.Parity = Parity.Space;
+            CommPort.Handshake = Handshake.None;
+            CommPort.ReceivedBytesThreshold = Convert.ToInt32(TXT_BAL_RECEIVEBYTES.Text);
         }
         private void LoadParameters()
         {
@@ -69,6 +87,16 @@ namespace SerialPortApp
         private void ProcessData() 
         {
         
+        }
+
+        private void BOT_OPEN_PORT_Click(object sender, EventArgs e)
+        {
+            CommPort.Open();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

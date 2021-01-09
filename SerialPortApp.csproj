@@ -52,7 +52,6 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Balanza.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Program.cs" />

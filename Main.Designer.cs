@@ -62,7 +62,6 @@ namespace SerialPortApp
             this.TXT_BAL_BAUDRATE = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_NumeroTickets = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -107,17 +106,48 @@ namespace SerialPortApp
             this.TXT_PAR_STRIG_CONECTION = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.BOT_OPEN_PORT = new System.Windows.Forms.Button();
+            this.BOT_CLOSE_PORT = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.TAB_DATA.SuspendLayout();
             this.TAB_PARAMETERS.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TAB_DATA
             // 
             this.TAB_DATA.Controls.Add(this.TAB_PARAMETERS);
             this.TAB_DATA.Controls.Add(this.tabPage2);
-            this.TAB_DATA.Controls.Add(this.tabPage3);
+            this.TAB_DATA.Controls.Add(this.tabPage1);
             this.TAB_DATA.Location = new System.Drawing.Point(8, 291);
             this.TAB_DATA.Name = "TAB_DATA";
             this.TAB_DATA.SelectedIndex = 0;
@@ -126,6 +156,8 @@ namespace SerialPortApp
             // 
             // TAB_PARAMETERS
             // 
+            this.TAB_PARAMETERS.Controls.Add(this.button4);
+            this.TAB_PARAMETERS.Controls.Add(this.button3);
             this.TAB_PARAMETERS.Controls.Add(this.label27);
             this.TAB_PARAMETERS.Controls.Add(this.TXT_PAR_STRIG_CONECTION);
             this.TAB_PARAMETERS.Controls.Add(this.label13);
@@ -244,6 +276,8 @@ namespace SerialPortApp
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.TXT__BAL_COMM_PORT);
             this.tabPage2.Controls.Add(this.label26);
             this.tabPage2.Controls.Add(this.TXT_BAL_OUTPUTSTRING);
@@ -415,16 +449,6 @@ namespace SerialPortApp
             this.label19.TabIndex = 17;
             this.label19.Text = "PARAMETROS DE COMUNICACION DE LA BALANZA POR DEFACTO :";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(756, 289);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "DATA";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -436,7 +460,7 @@ namespace SerialPortApp
             // 
             // Txt_NumeroTickets
             // 
-            this.Txt_NumeroTickets.Location = new System.Drawing.Point(131, 28);
+            this.Txt_NumeroTickets.Location = new System.Drawing.Point(131, 26);
             this.Txt_NumeroTickets.Name = "Txt_NumeroTickets";
             this.Txt_NumeroTickets.ReadOnly = true;
             this.Txt_NumeroTickets.Size = new System.Drawing.Size(143, 20);
@@ -611,14 +635,14 @@ namespace SerialPortApp
             // Txt_FechaPesada
             // 
             this.Txt_FechaPesada.Enabled = false;
-            this.Txt_FechaPesada.Location = new System.Drawing.Point(131, 57);
+            this.Txt_FechaPesada.Location = new System.Drawing.Point(131, 50);
             this.Txt_FechaPesada.Name = "Txt_FechaPesada";
             this.Txt_FechaPesada.Size = new System.Drawing.Size(200, 20);
             this.Txt_FechaPesada.TabIndex = 5;
             // 
             // Txt_ProductId
             // 
-            this.Txt_ProductId.Location = new System.Drawing.Point(131, 83);
+            this.Txt_ProductId.Location = new System.Drawing.Point(131, 76);
             this.Txt_ProductId.Name = "Txt_ProductId";
             this.Txt_ProductId.ReadOnly = true;
             this.Txt_ProductId.Size = new System.Drawing.Size(98, 20);
@@ -627,7 +651,7 @@ namespace SerialPortApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 86);
+            this.label3.Location = new System.Drawing.Point(8, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 6;
@@ -644,7 +668,7 @@ namespace SerialPortApp
             // 
             // Txt_ProductName
             // 
-            this.Txt_ProductName.Location = new System.Drawing.Point(131, 109);
+            this.Txt_ProductName.Location = new System.Drawing.Point(131, 102);
             this.Txt_ProductName.Name = "Txt_ProductName";
             this.Txt_ProductName.ReadOnly = true;
             this.Txt_ProductName.Size = new System.Drawing.Size(289, 20);
@@ -653,7 +677,7 @@ namespace SerialPortApp
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 112);
+            this.label4.Location = new System.Drawing.Point(10, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 13);
             this.label4.TabIndex = 9;
@@ -661,16 +685,16 @@ namespace SerialPortApp
             // 
             // Txt_Peso_Bruto
             // 
-            this.Txt_Peso_Bruto.Location = new System.Drawing.Point(131, 135);
+            this.Txt_Peso_Bruto.Location = new System.Drawing.Point(131, 128);
             this.Txt_Peso_Bruto.Name = "Txt_Peso_Bruto";
             this.Txt_Peso_Bruto.ReadOnly = true;
-            this.Txt_Peso_Bruto.Size = new System.Drawing.Size(143, 20);
+            this.Txt_Peso_Bruto.Size = new System.Drawing.Size(117, 20);
             this.Txt_Peso_Bruto.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 138);
+            this.label5.Location = new System.Drawing.Point(10, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 11;
@@ -678,16 +702,16 @@ namespace SerialPortApp
             // 
             // Txt_Peso_Tara
             // 
-            this.Txt_Peso_Tara.Location = new System.Drawing.Point(131, 161);
+            this.Txt_Peso_Tara.Location = new System.Drawing.Point(295, 128);
             this.Txt_Peso_Tara.Name = "Txt_Peso_Tara";
             this.Txt_Peso_Tara.ReadOnly = true;
-            this.Txt_Peso_Tara.Size = new System.Drawing.Size(143, 20);
+            this.Txt_Peso_Tara.Size = new System.Drawing.Size(125, 20);
             this.Txt_Peso_Tara.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 164);
+            this.label6.Location = new System.Drawing.Point(254, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 13;
@@ -717,7 +741,7 @@ namespace SerialPortApp
             // 
             // Txt_NoBatch
             // 
-            this.Txt_NoBatch.Location = new System.Drawing.Point(131, 187);
+            this.Txt_NoBatch.Location = new System.Drawing.Point(131, 154);
             this.Txt_NoBatch.Name = "Txt_NoBatch";
             this.Txt_NoBatch.ReadOnly = true;
             this.Txt_NoBatch.Size = new System.Drawing.Size(143, 20);
@@ -726,7 +750,7 @@ namespace SerialPortApp
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 190);
+            this.label8.Location = new System.Drawing.Point(10, 157);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 17;
@@ -734,7 +758,7 @@ namespace SerialPortApp
             // 
             // Txt_Operator
             // 
-            this.Txt_Operator.Location = new System.Drawing.Point(131, 213);
+            this.Txt_Operator.Location = new System.Drawing.Point(131, 180);
             this.Txt_Operator.Name = "Txt_Operator";
             this.Txt_Operator.ReadOnly = true;
             this.Txt_Operator.Size = new System.Drawing.Size(143, 20);
@@ -743,7 +767,7 @@ namespace SerialPortApp
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 216);
+            this.label9.Location = new System.Drawing.Point(10, 183);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 13);
             this.label9.TabIndex = 19;
@@ -751,7 +775,7 @@ namespace SerialPortApp
             // 
             // Txt_Codebar
             // 
-            this.Txt_Codebar.Location = new System.Drawing.Point(131, 239);
+            this.Txt_Codebar.Location = new System.Drawing.Point(131, 206);
             this.Txt_Codebar.Name = "Txt_Codebar";
             this.Txt_Codebar.ReadOnly = true;
             this.Txt_Codebar.Size = new System.Drawing.Size(143, 20);
@@ -760,7 +784,7 @@ namespace SerialPortApp
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(10, 242);
+            this.label10.Location = new System.Drawing.Point(10, 209);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 13);
             this.label10.TabIndex = 21;
@@ -768,16 +792,17 @@ namespace SerialPortApp
             // 
             // Txt_Commentaries
             // 
-            this.Txt_Commentaries.Location = new System.Drawing.Point(131, 265);
+            this.Txt_Commentaries.Location = new System.Drawing.Point(295, 213);
+            this.Txt_Commentaries.Multiline = true;
             this.Txt_Commentaries.Name = "Txt_Commentaries";
             this.Txt_Commentaries.ReadOnly = true;
-            this.Txt_Commentaries.Size = new System.Drawing.Size(287, 20);
+            this.Txt_Commentaries.Size = new System.Drawing.Size(328, 72);
             this.Txt_Commentaries.TabIndex = 24;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 268);
+            this.label11.Location = new System.Drawing.Point(292, 197);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 13);
             this.label11.TabIndex = 23;
@@ -785,9 +810,9 @@ namespace SerialPortApp
             // 
             // BOT_GET_PESO
             // 
-            this.BOT_GET_PESO.Location = new System.Drawing.Point(629, 197);
+            this.BOT_GET_PESO.Location = new System.Drawing.Point(506, 141);
             this.BOT_GET_PESO.Name = "BOT_GET_PESO";
-            this.BOT_GET_PESO.Size = new System.Drawing.Size(139, 23);
+            this.BOT_GET_PESO.Size = new System.Drawing.Size(117, 23);
             this.BOT_GET_PESO.TabIndex = 25;
             this.BOT_GET_PESO.Text = "Tomar Peso";
             this.BOT_GET_PESO.UseVisualStyleBackColor = true;
@@ -795,7 +820,7 @@ namespace SerialPortApp
             // LBL_STATUS_BALANZA
             // 
             this.LBL_STATUS_BALANZA.AutoSize = true;
-            this.LBL_STATUS_BALANZA.Location = new System.Drawing.Point(674, 223);
+            this.LBL_STATUS_BALANZA.Location = new System.Drawing.Point(674, 194);
             this.LBL_STATUS_BALANZA.Name = "LBL_STATUS_BALANZA";
             this.LBL_STATUS_BALANZA.Size = new System.Drawing.Size(55, 13);
             this.LBL_STATUS_BALANZA.TabIndex = 26;
@@ -822,7 +847,7 @@ namespace SerialPortApp
             // chk_anulados
             // 
             this.chk_anulados.AutoSize = true;
-            this.chk_anulados.Location = new System.Drawing.Point(328, 238);
+            this.chk_anulados.Location = new System.Drawing.Point(389, 58);
             this.chk_anulados.Name = "chk_anulados";
             this.chk_anulados.Size = new System.Drawing.Size(101, 17);
             this.chk_anulados.TabIndex = 29;
@@ -852,11 +877,307 @@ namespace SerialPortApp
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // BOT_OPEN_PORT
+            // 
+            this.BOT_OPEN_PORT.Location = new System.Drawing.Point(506, 83);
+            this.BOT_OPEN_PORT.Name = "BOT_OPEN_PORT";
+            this.BOT_OPEN_PORT.Size = new System.Drawing.Size(117, 23);
+            this.BOT_OPEN_PORT.TabIndex = 31;
+            this.BOT_OPEN_PORT.Text = "Abrir Puerto";
+            this.BOT_OPEN_PORT.UseVisualStyleBackColor = true;
+            this.BOT_OPEN_PORT.Click += new System.EventHandler(this.BOT_OPEN_PORT_Click);
+            // 
+            // BOT_CLOSE_PORT
+            // 
+            this.BOT_CLOSE_PORT.Location = new System.Drawing.Point(506, 112);
+            this.BOT_CLOSE_PORT.Name = "BOT_CLOSE_PORT";
+            this.BOT_CLOSE_PORT.Size = new System.Drawing.Size(117, 23);
+            this.BOT_CLOSE_PORT.TabIndex = 32;
+            this.BOT_CLOSE_PORT.Text = "Cerrar Puerto";
+            this.BOT_CLOSE_PORT.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.textBox9);
+            this.tabPage1.Controls.Add(this.label37);
+            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.label36);
+            this.tabPage1.Controls.Add(this.linkLabel3);
+            this.tabPage1.Controls.Add(this.linkLabel2);
+            this.tabPage1.Controls.Add(this.linkLabel1);
+            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.label35);
+            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.label34);
+            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.label33);
+            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.label32);
+            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.label31);
+            this.tabPage1.Controls.Add(this.label30);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(756, 289);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "PRODUCTOS";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(399, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(117, 23);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "Actualizar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(399, 34);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(117, 23);
+            this.button4.TabIndex = 34;
+            this.button4.Text = "Guardar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(344, 41);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(117, 23);
+            this.button5.TabIndex = 36;
+            this.button5.Text = "Guardar";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(344, 13);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(117, 23);
+            this.button6.TabIndex = 35;
+            this.button6.Text = "Actualizar";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(131, 232);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(143, 20);
+            this.textBox1.TabIndex = 34;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(10, 235);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(82, 13);
+            this.label28.TabIndex = 33;
+            this.label28.Text = "Precio Unitario :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(131, 258);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(143, 20);
+            this.textBox2.TabIndex = 36;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(10, 261);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(80, 13);
+            this.label29.TabIndex = 35;
+            this.label29.Text = "Total a Pagar  :";
+            // 
+            // label30
+            // 
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Location = new System.Drawing.Point(3, 3);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(320, 31);
+            this.label30.TabIndex = 18;
+            this.label30.Text = "DATOS DE LOS PRODUCTOS";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(148, 59);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(161, 20);
+            this.textBox3.TabIndex = 35;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(7, 62);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(65, 13);
+            this.label31.TabIndex = 34;
+            this.label31.Text = "Product Id  :";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(148, 85);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(161, 20);
+            this.textBox4.TabIndex = 37;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(7, 88);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(115, 13);
+            this.label32.TabIndex = 36;
+            this.label32.Text = "Producto Descripcion :";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(148, 111);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(161, 20);
+            this.textBox5.TabIndex = 39;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(7, 114);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(61, 13);
+            this.label33.TabIndex = 38;
+            this.label33.Text = "Categoria  :";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(148, 137);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(161, 20);
+            this.textBox6.TabIndex = 41;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(7, 140);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(75, 13);
+            this.label34.TabIndex = 40;
+            this.label34.Text = "Departaento  :";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(148, 163);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(161, 20);
+            this.textBox7.TabIndex = 43;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(7, 166);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(82, 13);
+            this.label35.TabIndex = 42;
+            this.label35.Text = "Precio Unitario :";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(6, 34);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(44, 13);
+            this.linkLabel1.TabIndex = 44;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Agregar";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(56, 34);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(50, 13);
+            this.linkLabel2.TabIndex = 45;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Modificar";
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(116, 34);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(40, 13);
+            this.linkLabel3.TabIndex = 46;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Buscar";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(148, 189);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(161, 20);
+            this.textBox8.TabIndex = 48;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(7, 192);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(31, 13);
+            this.label36.TabIndex = 47;
+            this.label36.Text = "Tax :";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(315, 57);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(294, 100);
+            this.textBox9.TabIndex = 50;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(316, 38);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(71, 13);
+            this.label37.TabIndex = 49;
+            this.label37.Text = "Ingredientes :";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(500, 239);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(111, 17);
+            this.checkBox1.TabIndex = 51;
+            this.checkBox1.Text = "Producto Anulado";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 611);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.BOT_CLOSE_PORT);
+            this.Controls.Add(this.BOT_OPEN_PORT);
             this.Controls.Add(this.chk_anulados);
             this.Controls.Add(this.BOT_PRINT_LABEL);
             this.Controls.Add(this.LBL_RECORDS);
@@ -898,6 +1219,8 @@ namespace SerialPortApp
             this.tabPage2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -938,7 +1261,6 @@ namespace SerialPortApp
         private System.Windows.Forms.ToolStripButton BOT_CANCELAR;
         private System.Windows.Forms.ToolStripButton BOT_GRABAR;
         private System.Windows.Forms.Label LBL_STATUS_BALANZA;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ToolStripButton BOT_PRIMERO;
         private System.Windows.Forms.ToolStripButton BOT_SIGUIENTE;
         private System.Windows.Forms.ToolStripButton BOT_ANTERIOR;
@@ -981,6 +1303,36 @@ namespace SerialPortApp
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox TXT_PAR_STRIG_CONECTION;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button BOT_OPEN_PORT;
+        private System.Windows.Forms.Button BOT_CLOSE_PORT;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
