@@ -58,6 +58,13 @@
   <ItemGroup>
     <Compile Include="Controlers\ProductsController.cs" />
     <Compile Include="Datalayer\AppDbContextSqlServer.cs" />
+    <Compile Include="Forms\SelecctionItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelecctionItems.Designer.cs">
+      <DependentUpon>SelecctionItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\T.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +80,9 @@
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\SelecctionItems.resx">
+      <DependentUpon>SelecctionItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

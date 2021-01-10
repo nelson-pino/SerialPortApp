@@ -620,6 +620,7 @@ namespace SerialPortApp
             this.LINK_PRO_SEARCH.TabIndex = 46;
             this.LINK_PRO_SEARCH.TabStop = true;
             this.LINK_PRO_SEARCH.Text = "Buscar";
+            this.LINK_PRO_SEARCH.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_PRO_SEARCH_LinkClicked);
             // 
             // LINK_PRO_UPDATE
             // 

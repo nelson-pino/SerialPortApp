@@ -5,6 +5,8 @@
     using System.IO.Ports;
     using SerialPortApp.Models;
     using SerialPortApp.Controlers;
+    using SerialPortApp.Forms;
+    using System.Collections.Generic;
 
     public partial class Main : Form
     {
@@ -163,5 +165,14 @@
             TXT_PRO_PRODUCTID.Focus();
         }
         #endregion
+
+        private void LINK_PRO_SEARCH_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var milista = prodductscontroller.List();
+            SelecctionItems selectitems = new SelecctionItems();
+            selectitems.BannerTipoItems = "Productos";
+            selectitems.data = milista;
+            selectitems.ShowDialog();
+        }
     }
 }
