@@ -13,7 +13,7 @@ namespace SerialPortApp.Forms
         public string BannerTipoItems { get; set; }
         public object data { get; set; } 
         public List<object> listdata;
-        public string TypeEntity { get; set; }
+        public object EntityReturn { get; set; }
 
         public SelecctionItems()
         {
@@ -96,11 +96,10 @@ namespace SerialPortApp.Forms
         }
         private void GRID_DATOS_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
-
-            var EntityGeneric = listdata.Where(i => (i.GetType().GetProperty("CodePersonolize").
-            GetValue(i) as string).Equals("10.001.01")).Single();
-
+            string id = GRID_DATOS.Rows[e.RowIndex].Cells["CodePersonolize"].Value.ToString();
+            EntityReturn  = listdata.Where(i => (i.GetType().GetProperty("CodePersonolize").
+            GetValue(i) as string).Equals(id)).SingleOrDefault();
+            this.Close();
         }
     }
 }

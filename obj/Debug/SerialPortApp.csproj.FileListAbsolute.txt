@@ -1,7 +1,6 @@
 C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\SerialPortApp.exe.config
 C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\SerialPortApp.exe
 C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\SerialPortApp.pdb
-C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csprojAssemblyReference.cache
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Main.resources
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Properties.Resources.resources
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csproj.GenerateResource.cache
@@ -15,3 +14,4 @@ C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\EntityFramework.SqlServer
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csproj.CopyComplete
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Migrations.cambiosproductos.resources
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Forms.SelecctionItems.resources
+C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csprojAssemblyReference.cache

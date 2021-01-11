@@ -950,7 +950,7 @@ namespace SerialPortApp
             // 
             // BOT_BUSCAR_PRODUCTS
             // 
-            this.BOT_BUSCAR_PRODUCTS.Location = new System.Drawing.Point(235, 81);
+            this.BOT_BUSCAR_PRODUCTS.Location = new System.Drawing.Point(235, 74);
             this.BOT_BUSCAR_PRODUCTS.Name = "BOT_BUSCAR_PRODUCTS";
             this.BOT_BUSCAR_PRODUCTS.Size = new System.Drawing.Size(39, 23);
             this.BOT_BUSCAR_PRODUCTS.TabIndex = 8;

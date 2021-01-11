@@ -34,12 +34,12 @@
             LoadParameters();
             ConfigObjectSerialPortComm();
 
-           
+
 
 
 
         }
-        private void ConfigObjectSerialPortComm() 
+        private void ConfigObjectSerialPortComm()
         {
             // Crear el Objeto SerialPort.
             CommPort.PortName = "COM2";
@@ -49,8 +49,8 @@
             CommPort.Handshake = Handshake.None;
             CommPort.ReceivedBytesThreshold = Convert.ToInt32(TXT_BAL_RECEIVEBYTES.Text);
         }
-        
-       
+
+
         private void GetDataPortSerialComm(object sender, SerialDataReceivedEventArgs e)
         {
             CommPort.Read(CharBuffer, 1, 49);
@@ -60,13 +60,13 @@
                 this.BeginInvoke(new SetTextCallBack(SetText), new object[] { InputData });
             }
         }
-        private void SetText(string text) 
+        private void SetText(string text)
         {
             TXT_HYPER_TERMINAL.Text = Text;
         }
-        private void ProcessData() 
+        private void ProcessData()
         {
-        
+
         }
 
         #region FORMS_ZONE
@@ -103,7 +103,7 @@
 
         #endregion
         #region PRODUCTS_ZONE
-        private Products CreateObjectProduct() 
+        private Products CreateObjectProduct()
         {
             Products producto = new Products
             {
@@ -118,12 +118,12 @@
             };
             return producto;
         }
-        private void PRODUCTS_ADD() 
-        {  
+        private void PRODUCTS_ADD()
+        {
             prodductscontroller.Add(CreateObjectProduct());
             EditModeProducts = 0;
         }
-        private void PRODUCTS_UPDATE() 
+        private void PRODUCTS_UPDATE()
         {
             prodductscontroller.Update(CreateObjectProduct());
             EditModeProducts = 0;
@@ -173,6 +173,16 @@
             selectitems.BannerTipoItems = "Productos";
             selectitems.data = milista;
             selectitems.ShowDialog();
+            Products ReturnProduct = new Products();
+            ReturnProduct = (Products)selectitems.EntityReturn;
+            TXT_PRO_PRODUCTID.Text = ReturnProduct.ProductID.ToString();
+            TXT_PRO_PRODUCT_NAME.Text = ReturnProduct.ProductName.ToString();
+            TXT_PRO_CATEGORY.Text = ReturnProduct.ProductCategory.ToString();
+            TXT_PRO_DEPARTAMENT.Text = ReturnProduct.Departament.ToString();
+            TXT_PRO_INGREDIENTS.Text = ReturnProduct.Ingredients.ToString();
+            TXT_PRO_UNITPRICE.Text = ReturnProduct.UnitPrice.ToString();
+            TXT_PRO_UNITSHOP.Text = ReturnProduct.UnitShop.ToString();
+            TXT_PRO_TAX.Text = ReturnProduct.UnitShop.ToString();
         }
     }
 }
