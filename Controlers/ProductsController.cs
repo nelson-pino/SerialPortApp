@@ -2,6 +2,7 @@
 {
     using SerialPortApp.Datalayer;
     using SerialPortApp.Models;
+    using System.Data.Entity;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -24,21 +25,35 @@
         }
         public void Update(Products producto) 
         {
-            AppdbContext.Entry(producto);
+            var item = AppdbContext.Products.Find(producto.ProductID);
+            if (item != null)
+            {
+                item.ProductName = producto.ProductName;
+                item.ProductCategory = producto.ProductCategory;
+                item.Departament = producto.Departament;
+                item.Tax = producto.Tax;
+                item.Ingredients = producto.Ingredients;
+                item.CodePersonolize = producto.CodePersonolize;
+                item.UnitPrice = producto.UnitPrice;
+                item.UnitShop = producto.UnitShop;
+            }
             AppdbContext.SaveChanges();
         }
-        public void Detele(string id) 
+        public void Detele(int id) 
         {
             var producto = AppdbContext.Products.Find(id);
-            AppdbContext.Products.Remove(producto);
+            if (producto != null) 
+            {
+                AppdbContext.Products.Remove(producto);
+                AppdbContext.SaveChanges();
+            }
         }
         public List<Products> List() 
         {
-            List<Products> mylist = new List<Products>();
-            mylist = AppdbContext.Products.ToList();
+            List<Products> mylist = AppdbContext.Products.ToList();
             return mylist;
         }
-        public Products GetElementById(int id) 
+        public Products GetElementById() 
         {
             Products myproduct = new Products();
             return myproduct;

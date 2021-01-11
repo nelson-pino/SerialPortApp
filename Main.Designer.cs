@@ -68,7 +68,10 @@ namespace SerialPortApp
             this.TXT_BAL_BAUDRATE = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TAB_PRODUCTS = new System.Windows.Forms.TabPage();
+            this.label39 = new System.Windows.Forms.Label();
+            this.TXT_PRO_INDEX = new System.Windows.Forms.TextBox();
+            this.LINK_PRO_ELIMINAR = new System.Windows.Forms.LinkLabel();
             this.LINK_PRO_GUARDAR = new System.Windows.Forms.LinkLabel();
             this.TXT_PRO_UNITSHOP = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -142,7 +145,7 @@ namespace SerialPortApp
             this.TAB_DATA.SuspendLayout();
             this.TAB_PARAMETERS.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.TAB_PRODUCTS.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,12 +153,14 @@ namespace SerialPortApp
             // 
             this.TAB_DATA.Controls.Add(this.TAB_PARAMETERS);
             this.TAB_DATA.Controls.Add(this.tabPage2);
-            this.TAB_DATA.Controls.Add(this.tabPage1);
+            this.TAB_DATA.Controls.Add(this.TAB_PRODUCTS);
+            this.TAB_DATA.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TAB_DATA.Location = new System.Drawing.Point(8, 291);
             this.TAB_DATA.Name = "TAB_DATA";
             this.TAB_DATA.SelectedIndex = 0;
             this.TAB_DATA.Size = new System.Drawing.Size(764, 315);
             this.TAB_DATA.TabIndex = 0;
+            this.TAB_DATA.SelectedIndexChanged += new System.EventHandler(this.TAB_DATA_SelectedIndexChanged);
             // 
             // TAB_PARAMETERS
             // 
@@ -174,10 +179,10 @@ namespace SerialPortApp
             this.TAB_PARAMETERS.Controls.Add(this.label15);
             this.TAB_PARAMETERS.Controls.Add(this.label14);
             this.TAB_PARAMETERS.Controls.Add(this.TXT_PAR_INSTANCESQL);
-            this.TAB_PARAMETERS.Location = new System.Drawing.Point(4, 22);
+            this.TAB_PARAMETERS.Location = new System.Drawing.Point(4, 25);
             this.TAB_PARAMETERS.Name = "TAB_PARAMETERS";
             this.TAB_PARAMETERS.Padding = new System.Windows.Forms.Padding(3);
-            this.TAB_PARAMETERS.Size = new System.Drawing.Size(756, 289);
+            this.TAB_PARAMETERS.Size = new System.Drawing.Size(756, 286);
             this.TAB_PARAMETERS.TabIndex = 0;
             this.TAB_PARAMETERS.Text = "PARAMETROS";
             this.TAB_PARAMETERS.UseVisualStyleBackColor = true;
@@ -233,7 +238,7 @@ namespace SerialPortApp
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(9, 148);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 13);
+            this.label18.Size = new System.Drawing.Size(51, 16);
             this.label18.TabIndex = 10;
             this.label18.Text = "Puerto :";
             // 
@@ -242,7 +247,7 @@ namespace SerialPortApp
             this.TXT_PAR_PORT_TCPIP.Location = new System.Drawing.Point(179, 145);
             this.TXT_PAR_PORT_TCPIP.Name = "TXT_PAR_PORT_TCPIP";
             this.TXT_PAR_PORT_TCPIP.ReadOnly = true;
-            this.TXT_PAR_PORT_TCPIP.Size = new System.Drawing.Size(198, 20);
+            this.TXT_PAR_PORT_TCPIP.Size = new System.Drawing.Size(198, 23);
             this.TXT_PAR_PORT_TCPIP.TabIndex = 9;
             // 
             // label17
@@ -250,7 +255,7 @@ namespace SerialPortApp
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(9, 122);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 13);
+            this.label17.Size = new System.Drawing.Size(68, 16);
             this.label17.TabIndex = 8;
             this.label17.Text = "Password :";
             // 
@@ -259,7 +264,7 @@ namespace SerialPortApp
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(7, 96);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(113, 13);
+            this.label16.Size = new System.Drawing.Size(119, 16);
             this.label16.TabIndex = 7;
             this.label16.Text = "Usuario SQL SRVER :";
             // 
@@ -268,7 +273,7 @@ namespace SerialPortApp
             this.TXT_PAR_PASSWORD_SQL.Location = new System.Drawing.Point(179, 119);
             this.TXT_PAR_PASSWORD_SQL.Name = "TXT_PAR_PASSWORD_SQL";
             this.TXT_PAR_PASSWORD_SQL.ReadOnly = true;
-            this.TXT_PAR_PASSWORD_SQL.Size = new System.Drawing.Size(198, 20);
+            this.TXT_PAR_PASSWORD_SQL.Size = new System.Drawing.Size(198, 23);
             this.TXT_PAR_PASSWORD_SQL.TabIndex = 6;
             // 
             // TXT_PAR_USER_SQL
@@ -276,7 +281,7 @@ namespace SerialPortApp
             this.TXT_PAR_USER_SQL.Location = new System.Drawing.Point(179, 93);
             this.TXT_PAR_USER_SQL.Name = "TXT_PAR_USER_SQL";
             this.TXT_PAR_USER_SQL.ReadOnly = true;
-            this.TXT_PAR_USER_SQL.Size = new System.Drawing.Size(198, 20);
+            this.TXT_PAR_USER_SQL.Size = new System.Drawing.Size(198, 23);
             this.TXT_PAR_USER_SQL.TabIndex = 5;
             // 
             // TXT_PAR_DBNAME
@@ -284,7 +289,7 @@ namespace SerialPortApp
             this.TXT_PAR_DBNAME.Location = new System.Drawing.Point(179, 67);
             this.TXT_PAR_DBNAME.Name = "TXT_PAR_DBNAME";
             this.TXT_PAR_DBNAME.ReadOnly = true;
-            this.TXT_PAR_DBNAME.Size = new System.Drawing.Size(198, 20);
+            this.TXT_PAR_DBNAME.Size = new System.Drawing.Size(198, 23);
             this.TXT_PAR_DBNAME.TabIndex = 4;
             // 
             // label15
@@ -292,7 +297,7 @@ namespace SerialPortApp
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(6, 70);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(138, 13);
+            this.label15.Size = new System.Drawing.Size(153, 16);
             this.label15.TabIndex = 3;
             this.label15.Text = "Nombre de Base de Datos :";
             // 
@@ -301,7 +306,7 @@ namespace SerialPortApp
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(9, 44);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(95, 13);
+            this.label14.Size = new System.Drawing.Size(103, 16);
             this.label14.TabIndex = 2;
             this.label14.Text = "Instancia de SQL :";
             // 
@@ -310,7 +315,7 @@ namespace SerialPortApp
             this.TXT_PAR_INSTANCESQL.Location = new System.Drawing.Point(179, 41);
             this.TXT_PAR_INSTANCESQL.Name = "TXT_PAR_INSTANCESQL";
             this.TXT_PAR_INSTANCESQL.ReadOnly = true;
-            this.TXT_PAR_INSTANCESQL.Size = new System.Drawing.Size(198, 20);
+            this.TXT_PAR_INSTANCESQL.Size = new System.Drawing.Size(198, 23);
             this.TXT_PAR_INSTANCESQL.TabIndex = 1;
             // 
             // tabPage2
@@ -334,10 +339,10 @@ namespace SerialPortApp
             this.tabPage2.Controls.Add(this.TXT_BAL_BAUDRATE);
             this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(756, 289);
+            this.tabPage2.Size = new System.Drawing.Size(756, 286);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "BALANZAS";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -365,7 +370,7 @@ namespace SerialPortApp
             this.TXT__BAL_COMM_PORT.Location = new System.Drawing.Point(161, 79);
             this.TXT__BAL_COMM_PORT.Name = "TXT__BAL_COMM_PORT";
             this.TXT__BAL_COMM_PORT.ReadOnly = true;
-            this.TXT__BAL_COMM_PORT.Size = new System.Drawing.Size(161, 20);
+            this.TXT__BAL_COMM_PORT.Size = new System.Drawing.Size(161, 23);
             this.TXT__BAL_COMM_PORT.TabIndex = 33;
             // 
             // label26
@@ -373,7 +378,7 @@ namespace SerialPortApp
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(20, 82);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(129, 13);
+            this.label26.Size = new System.Drawing.Size(147, 16);
             this.label26.TabIndex = 32;
             this.label26.Text = "Puerto de Comunicacion :";
             // 
@@ -382,7 +387,7 @@ namespace SerialPortApp
             this.TXT_BAL_OUTPUTSTRING.Location = new System.Drawing.Point(161, 261);
             this.TXT_BAL_OUTPUTSTRING.Name = "TXT_BAL_OUTPUTSTRING";
             this.TXT_BAL_OUTPUTSTRING.ReadOnly = true;
-            this.TXT_BAL_OUTPUTSTRING.Size = new System.Drawing.Size(161, 20);
+            this.TXT_BAL_OUTPUTSTRING.Size = new System.Drawing.Size(161, 23);
             this.TXT_BAL_OUTPUTSTRING.TabIndex = 31;
             // 
             // label25
@@ -390,7 +395,7 @@ namespace SerialPortApp
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(20, 264);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(72, 13);
+            this.label25.Size = new System.Drawing.Size(83, 16);
             this.label25.TabIndex = 30;
             this.label25.Text = "Salida String :";
             // 
@@ -399,7 +404,7 @@ namespace SerialPortApp
             this.TXT_BAL_RECEIVEBYTES.Location = new System.Drawing.Point(161, 235);
             this.TXT_BAL_RECEIVEBYTES.Name = "TXT_BAL_RECEIVEBYTES";
             this.TXT_BAL_RECEIVEBYTES.ReadOnly = true;
-            this.TXT_BAL_RECEIVEBYTES.Size = new System.Drawing.Size(161, 20);
+            this.TXT_BAL_RECEIVEBYTES.Size = new System.Drawing.Size(161, 23);
             this.TXT_BAL_RECEIVEBYTES.TabIndex = 29;
             // 
             // label12
@@ -407,7 +412,7 @@ namespace SerialPortApp
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(20, 238);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 13);
+            this.label12.Size = new System.Drawing.Size(148, 16);
             this.label12.TabIndex = 28;
             this.label12.Text = "ReceivedBytesThreshold :";
             // 
@@ -416,7 +421,7 @@ namespace SerialPortApp
             this.TXT_BAL_HANDSHAKE.Location = new System.Drawing.Point(161, 209);
             this.TXT_BAL_HANDSHAKE.Name = "TXT_BAL_HANDSHAKE";
             this.TXT_BAL_HANDSHAKE.ReadOnly = true;
-            this.TXT_BAL_HANDSHAKE.Size = new System.Drawing.Size(161, 20);
+            this.TXT_BAL_HANDSHAKE.Size = new System.Drawing.Size(161, 23);
             this.TXT_BAL_HANDSHAKE.TabIndex = 27;
             // 
             // label24
@@ -424,7 +429,7 @@ namespace SerialPortApp
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(20, 212);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(68, 13);
+            this.label24.Size = new System.Drawing.Size(73, 16);
             this.label24.TabIndex = 26;
             this.label24.Text = "Handshake :";
             // 
@@ -433,7 +438,7 @@ namespace SerialPortApp
             this.TXT_BAL_STOPBITS.Location = new System.Drawing.Point(161, 183);
             this.TXT_BAL_STOPBITS.Name = "TXT_BAL_STOPBITS";
             this.TXT_BAL_STOPBITS.ReadOnly = true;
-            this.TXT_BAL_STOPBITS.Size = new System.Drawing.Size(161, 20);
+            this.TXT_BAL_STOPBITS.Size = new System.Drawing.Size(161, 23);
             this.TXT_BAL_STOPBITS.TabIndex = 25;
             // 
             // label23
@@ -441,7 +446,7 @@ namespace SerialPortApp
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(20, 186);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(52, 13);
+            this.label23.Size = new System.Drawing.Size(61, 16);
             this.label23.TabIndex = 24;
             this.label23.Text = "StopBits :";
             // 
@@ -450,7 +455,7 @@ namespace SerialPortApp
             this.TXT_BAL_PARITY.Location = new System.Drawing.Point(161, 157);
             this.TXT_BAL_PARITY.Name = "TXT_BAL_PARITY";
             this.TXT_BAL_PARITY.ReadOnly = true;
-            this.TXT_BAL_PARITY.Size = new System.Drawing.Size(161, 20);
+            this.TXT_BAL_PARITY.Size = new System.Drawing.Size(161, 23);
             this.TXT_BAL_PARITY.TabIndex = 23;
             // 
             // label22
@@ -458,7 +463,7 @@ namespace SerialPortApp
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(20, 160);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(39, 13);
+            this.label22.Size = new System.Drawing.Size(47, 16);
             this.label22.TabIndex = 22;
             this.label22.Text = "Parity :";
             // 
@@ -467,7 +472,7 @@ namespace SerialPortApp
             this.TXT_BAL_DATABITS.Location = new System.Drawing.Point(161, 131);
             this.TXT_BAL_DATABITS.Name = "TXT_BAL_DATABITS";
             this.TXT_BAL_DATABITS.ReadOnly = true;
-            this.TXT_BAL_DATABITS.Size = new System.Drawing.Size(161, 20);
+            this.TXT_BAL_DATABITS.Size = new System.Drawing.Size(161, 23);
             this.TXT_BAL_DATABITS.TabIndex = 21;
             // 
             // label21
@@ -475,7 +480,7 @@ namespace SerialPortApp
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(20, 134);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 13);
+            this.label21.Size = new System.Drawing.Size(60, 16);
             this.label21.TabIndex = 20;
             this.label21.Text = "DataBits :";
             // 
@@ -484,7 +489,7 @@ namespace SerialPortApp
             this.TXT_BAL_BAUDRATE.Location = new System.Drawing.Point(161, 105);
             this.TXT_BAL_BAUDRATE.Name = "TXT_BAL_BAUDRATE";
             this.TXT_BAL_BAUDRATE.ReadOnly = true;
-            this.TXT_BAL_BAUDRATE.Size = new System.Drawing.Size(161, 20);
+            this.TXT_BAL_BAUDRATE.Size = new System.Drawing.Size(161, 23);
             this.TXT_BAL_BAUDRATE.TabIndex = 19;
             // 
             // label20
@@ -492,7 +497,7 @@ namespace SerialPortApp
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(20, 108);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(61, 13);
+            this.label20.Size = new System.Drawing.Size(65, 16);
             this.label20.TabIndex = 18;
             this.label20.Text = "BaudRate :";
             // 
@@ -506,47 +511,82 @@ namespace SerialPortApp
             this.label19.TabIndex = 17;
             this.label19.Text = "PARAMETROS DE COMUNICACION DE LA BALANZA POR DEFACTO :";
             // 
-            // tabPage1
+            // TAB_PRODUCTS
             // 
-            this.tabPage1.Controls.Add(this.LINK_PRO_GUARDAR);
-            this.tabPage1.Controls.Add(this.TXT_PRO_UNITSHOP);
-            this.tabPage1.Controls.Add(this.label38);
-            this.tabPage1.Controls.Add(this.CHK_PRODUCT_ANULADO);
-            this.tabPage1.Controls.Add(this.TXT_PRO_INGREDIENTS);
-            this.tabPage1.Controls.Add(this.label37);
-            this.tabPage1.Controls.Add(this.TXT_PRO_TAX);
-            this.tabPage1.Controls.Add(this.label36);
-            this.tabPage1.Controls.Add(this.LINK_PRO_SEARCH);
-            this.tabPage1.Controls.Add(this.LINK_PRO_UPDATE);
-            this.tabPage1.Controls.Add(this.LINK_PRO_AGREGAR);
-            this.tabPage1.Controls.Add(this.TXT_PRO_UNITPRICE);
-            this.tabPage1.Controls.Add(this.label35);
-            this.tabPage1.Controls.Add(this.TXT_PRO_DEPARTAMENT);
-            this.tabPage1.Controls.Add(this.label34);
-            this.tabPage1.Controls.Add(this.TXT_PRO_CATEGORY);
-            this.tabPage1.Controls.Add(this.label33);
-            this.tabPage1.Controls.Add(this.TXT_PRO_PRODUCT_NAME);
-            this.tabPage1.Controls.Add(this.label32);
-            this.tabPage1.Controls.Add(this.TXT_PRO_PRODUCTID);
-            this.tabPage1.Controls.Add(this.label31);
-            this.tabPage1.Controls.Add(this.label30);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(756, 289);
-            this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = "PRODUCTOS";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.TAB_PRODUCTS.Controls.Add(this.label39);
+            this.TAB_PRODUCTS.Controls.Add(this.TXT_PRO_INDEX);
+            this.TAB_PRODUCTS.Controls.Add(this.LINK_PRO_ELIMINAR);
+            this.TAB_PRODUCTS.Controls.Add(this.LINK_PRO_GUARDAR);
+            this.TAB_PRODUCTS.Controls.Add(this.TXT_PRO_UNITSHOP);
+            this.TAB_PRODUCTS.Controls.Add(this.label38);
+            this.TAB_PRODUCTS.Controls.Add(this.CHK_PRODUCT_ANULADO);
+            this.TAB_PRODUCTS.Controls.Add(this.TXT_PRO_INGREDIENTS);
+            this.TAB_PRODUCTS.Controls.Add(this.label37);
+            this.TAB_PRODUCTS.Controls.Add(this.TXT_PRO_TAX);
+            this.TAB_PRODUCTS.Controls.Add(this.label36);
+            this.TAB_PRODUCTS.Controls.Add(this.LINK_PRO_SEARCH);
+            this.TAB_PRODUCTS.Controls.Add(this.LINK_PRO_UPDATE);
+            this.TAB_PRODUCTS.Controls.Add(this.LINK_PRO_AGREGAR);
+            this.TAB_PRODUCTS.Controls.Add(this.TXT_PRO_UNITPRICE);
+            this.TAB_PRODUCTS.Controls.Add(this.label35);
+            this.TAB_PRODUCTS.Controls.Add(this.TXT_PRO_DEPARTAMENT);
+            this.TAB_PRODUCTS.Controls.Add(this.label34);
+            this.TAB_PRODUCTS.Controls.Add(this.TXT_PRO_CATEGORY);
+            this.TAB_PRODUCTS.Controls.Add(this.label33);
+            this.TAB_PRODUCTS.Controls.Add(this.TXT_PRO_PRODUCT_NAME);
+            this.TAB_PRODUCTS.Controls.Add(this.label32);
+            this.TAB_PRODUCTS.Controls.Add(this.TXT_PRO_PRODUCTID);
+            this.TAB_PRODUCTS.Controls.Add(this.label31);
+            this.TAB_PRODUCTS.Controls.Add(this.label30);
+            this.TAB_PRODUCTS.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAB_PRODUCTS.Location = new System.Drawing.Point(4, 25);
+            this.TAB_PRODUCTS.Name = "TAB_PRODUCTS";
+            this.TAB_PRODUCTS.Padding = new System.Windows.Forms.Padding(3);
+            this.TAB_PRODUCTS.Size = new System.Drawing.Size(756, 286);
+            this.TAB_PRODUCTS.TabIndex = 3;
+            this.TAB_PRODUCTS.Text = "PRODUCTOS";
+            this.TAB_PRODUCTS.UseVisualStyleBackColor = true;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(491, 195);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(43, 16);
+            this.label39.TabIndex = 57;
+            this.label39.Text = "Index :";
+            // 
+            // TXT_PRO_INDEX
+            // 
+            this.TXT_PRO_INDEX.Location = new System.Drawing.Point(545, 192);
+            this.TXT_PRO_INDEX.Name = "TXT_PRO_INDEX";
+            this.TXT_PRO_INDEX.ReadOnly = true;
+            this.TXT_PRO_INDEX.Size = new System.Drawing.Size(80, 23);
+            this.TXT_PRO_INDEX.TabIndex = 56;
+            // 
+            // LINK_PRO_ELIMINAR
+            // 
+            this.LINK_PRO_ELIMINAR.AutoSize = true;
+            this.LINK_PRO_ELIMINAR.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_PRO_ELIMINAR.Location = new System.Drawing.Point(207, 34);
+            this.LINK_PRO_ELIMINAR.Name = "LINK_PRO_ELIMINAR";
+            this.LINK_PRO_ELIMINAR.Size = new System.Drawing.Size(60, 17);
+            this.LINK_PRO_ELIMINAR.TabIndex = 55;
+            this.LINK_PRO_ELIMINAR.TabStop = true;
+            this.LINK_PRO_ELIMINAR.Text = "ELIMINAR";
+            this.LINK_PRO_ELIMINAR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_PRO_ELIMINAR_LinkClicked);
             // 
             // LINK_PRO_GUARDAR
             // 
             this.LINK_PRO_GUARDAR.AutoSize = true;
-            this.LINK_PRO_GUARDAR.Location = new System.Drawing.Point(56, 34);
+            this.LINK_PRO_GUARDAR.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_PRO_GUARDAR.Location = new System.Drawing.Point(73, 34);
             this.LINK_PRO_GUARDAR.Name = "LINK_PRO_GUARDAR";
-            this.LINK_PRO_GUARDAR.Size = new System.Drawing.Size(39, 13);
+            this.LINK_PRO_GUARDAR.Size = new System.Drawing.Size(54, 17);
             this.LINK_PRO_GUARDAR.TabIndex = 54;
             this.LINK_PRO_GUARDAR.TabStop = true;
-            this.LINK_PRO_GUARDAR.Text = "Grabar";
+            this.LINK_PRO_GUARDAR.Text = "GRABAR";
             this.LINK_PRO_GUARDAR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_PRO_GUARDAR_LinkClicked);
             // 
             // TXT_PRO_UNITSHOP
@@ -554,31 +594,33 @@ namespace SerialPortApp
             this.TXT_PRO_UNITSHOP.Location = new System.Drawing.Point(148, 163);
             this.TXT_PRO_UNITSHOP.Name = "TXT_PRO_UNITSHOP";
             this.TXT_PRO_UNITSHOP.ReadOnly = true;
-            this.TXT_PRO_UNITSHOP.Size = new System.Drawing.Size(161, 20);
+            this.TXT_PRO_UNITSHOP.Size = new System.Drawing.Size(161, 23);
             this.TXT_PRO_UNITSHOP.TabIndex = 53;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.Location = new System.Drawing.Point(7, 166);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(78, 13);
+            this.label38.Size = new System.Drawing.Size(87, 16);
             this.label38.TabIndex = 52;
             this.label38.Text = "Unidad Venta :";
             // 
             // CHK_PRODUCT_ANULADO
             // 
             this.CHK_PRODUCT_ANULADO.AutoSize = true;
+            this.CHK_PRODUCT_ANULADO.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CHK_PRODUCT_ANULADO.Location = new System.Drawing.Point(500, 239);
             this.CHK_PRODUCT_ANULADO.Name = "CHK_PRODUCT_ANULADO";
-            this.CHK_PRODUCT_ANULADO.Size = new System.Drawing.Size(111, 17);
+            this.CHK_PRODUCT_ANULADO.Size = new System.Drawing.Size(126, 20);
             this.CHK_PRODUCT_ANULADO.TabIndex = 51;
             this.CHK_PRODUCT_ANULADO.Text = "Producto Anulado";
             this.CHK_PRODUCT_ANULADO.UseVisualStyleBackColor = true;
             // 
             // TXT_PRO_INGREDIENTS
             // 
-            this.TXT_PRO_INGREDIENTS.Location = new System.Drawing.Point(315, 57);
+            this.TXT_PRO_INGREDIENTS.Location = new System.Drawing.Point(331, 83);
             this.TXT_PRO_INGREDIENTS.Multiline = true;
             this.TXT_PRO_INGREDIENTS.Name = "TXT_PRO_INGREDIENTS";
             this.TXT_PRO_INGREDIENTS.ReadOnly = true;
@@ -588,60 +630,65 @@ namespace SerialPortApp
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(316, 38);
+            this.label37.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(328, 66);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(71, 13);
+            this.label37.Size = new System.Drawing.Size(93, 16);
             this.label37.TabIndex = 49;
-            this.label37.Text = "Ingredientes :";
+            this.label37.Text = "INGREDIENTES :";
             // 
             // TXT_PRO_TAX
             // 
             this.TXT_PRO_TAX.Location = new System.Drawing.Point(148, 215);
             this.TXT_PRO_TAX.Name = "TXT_PRO_TAX";
             this.TXT_PRO_TAX.ReadOnly = true;
-            this.TXT_PRO_TAX.Size = new System.Drawing.Size(161, 20);
+            this.TXT_PRO_TAX.Size = new System.Drawing.Size(161, 23);
             this.TXT_PRO_TAX.TabIndex = 48;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(7, 218);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(31, 13);
+            this.label36.Size = new System.Drawing.Size(32, 16);
             this.label36.TabIndex = 47;
             this.label36.Text = "Tax :";
             // 
             // LINK_PRO_SEARCH
             // 
             this.LINK_PRO_SEARCH.AutoSize = true;
-            this.LINK_PRO_SEARCH.Location = new System.Drawing.Point(157, 34);
+            this.LINK_PRO_SEARCH.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_PRO_SEARCH.Location = new System.Drawing.Point(273, 34);
             this.LINK_PRO_SEARCH.Name = "LINK_PRO_SEARCH";
-            this.LINK_PRO_SEARCH.Size = new System.Drawing.Size(40, 13);
+            this.LINK_PRO_SEARCH.Size = new System.Drawing.Size(53, 17);
             this.LINK_PRO_SEARCH.TabIndex = 46;
             this.LINK_PRO_SEARCH.TabStop = true;
-            this.LINK_PRO_SEARCH.Text = "Buscar";
+            this.LINK_PRO_SEARCH.Text = "BUSCAR";
             this.LINK_PRO_SEARCH.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_PRO_SEARCH_LinkClicked);
             // 
             // LINK_PRO_UPDATE
             // 
             this.LINK_PRO_UPDATE.AutoSize = true;
-            this.LINK_PRO_UPDATE.Location = new System.Drawing.Point(101, 34);
+            this.LINK_PRO_UPDATE.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_PRO_UPDATE.Location = new System.Drawing.Point(133, 34);
             this.LINK_PRO_UPDATE.Name = "LINK_PRO_UPDATE";
-            this.LINK_PRO_UPDATE.Size = new System.Drawing.Size(50, 13);
+            this.LINK_PRO_UPDATE.Size = new System.Drawing.Size(68, 17);
             this.LINK_PRO_UPDATE.TabIndex = 45;
             this.LINK_PRO_UPDATE.TabStop = true;
-            this.LINK_PRO_UPDATE.Text = "Modificar";
+            this.LINK_PRO_UPDATE.Text = "MODIFICAR";
             this.LINK_PRO_UPDATE.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_PRO_UPDATE_LinkClicked);
             // 
             // LINK_PRO_AGREGAR
             // 
             this.LINK_PRO_AGREGAR.AutoSize = true;
+            this.LINK_PRO_AGREGAR.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LINK_PRO_AGREGAR.Location = new System.Drawing.Point(6, 34);
             this.LINK_PRO_AGREGAR.Name = "LINK_PRO_AGREGAR";
-            this.LINK_PRO_AGREGAR.Size = new System.Drawing.Size(44, 13);
+            this.LINK_PRO_AGREGAR.Size = new System.Drawing.Size(61, 17);
             this.LINK_PRO_AGREGAR.TabIndex = 44;
             this.LINK_PRO_AGREGAR.TabStop = true;
-            this.LINK_PRO_AGREGAR.Text = "Agregar";
+            this.LINK_PRO_AGREGAR.Text = "AGREGAR";
             this.LINK_PRO_AGREGAR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_PRO_AGREGAR_LinkClicked);
             // 
             // TXT_PRO_UNITPRICE
@@ -649,15 +696,16 @@ namespace SerialPortApp
             this.TXT_PRO_UNITPRICE.Location = new System.Drawing.Point(148, 189);
             this.TXT_PRO_UNITPRICE.Name = "TXT_PRO_UNITPRICE";
             this.TXT_PRO_UNITPRICE.ReadOnly = true;
-            this.TXT_PRO_UNITPRICE.Size = new System.Drawing.Size(161, 20);
+            this.TXT_PRO_UNITPRICE.Size = new System.Drawing.Size(161, 23);
             this.TXT_PRO_UNITPRICE.TabIndex = 43;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(7, 192);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(82, 13);
+            this.label35.Size = new System.Drawing.Size(95, 16);
             this.label35.TabIndex = 42;
             this.label35.Text = "Precio Unitario :";
             // 
@@ -666,15 +714,16 @@ namespace SerialPortApp
             this.TXT_PRO_DEPARTAMENT.Location = new System.Drawing.Point(148, 137);
             this.TXT_PRO_DEPARTAMENT.Name = "TXT_PRO_DEPARTAMENT";
             this.TXT_PRO_DEPARTAMENT.ReadOnly = true;
-            this.TXT_PRO_DEPARTAMENT.Size = new System.Drawing.Size(161, 20);
+            this.TXT_PRO_DEPARTAMENT.Size = new System.Drawing.Size(161, 23);
             this.TXT_PRO_DEPARTAMENT.TabIndex = 41;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(7, 140);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(75, 13);
+            this.label34.Size = new System.Drawing.Size(85, 16);
             this.label34.TabIndex = 40;
             this.label34.Text = "Departaento  :";
             // 
@@ -683,15 +732,16 @@ namespace SerialPortApp
             this.TXT_PRO_CATEGORY.Location = new System.Drawing.Point(148, 111);
             this.TXT_PRO_CATEGORY.Name = "TXT_PRO_CATEGORY";
             this.TXT_PRO_CATEGORY.ReadOnly = true;
-            this.TXT_PRO_CATEGORY.Size = new System.Drawing.Size(161, 20);
+            this.TXT_PRO_CATEGORY.Size = new System.Drawing.Size(161, 23);
             this.TXT_PRO_CATEGORY.TabIndex = 39;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Location = new System.Drawing.Point(7, 114);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 13);
+            this.label33.Size = new System.Drawing.Size(69, 16);
             this.label33.TabIndex = 38;
             this.label33.Text = "Categoria  :";
             // 
@@ -700,15 +750,16 @@ namespace SerialPortApp
             this.TXT_PRO_PRODUCT_NAME.Location = new System.Drawing.Point(148, 85);
             this.TXT_PRO_PRODUCT_NAME.Name = "TXT_PRO_PRODUCT_NAME";
             this.TXT_PRO_PRODUCT_NAME.ReadOnly = true;
-            this.TXT_PRO_PRODUCT_NAME.Size = new System.Drawing.Size(161, 20);
+            this.TXT_PRO_PRODUCT_NAME.Size = new System.Drawing.Size(161, 23);
             this.TXT_PRO_PRODUCT_NAME.TabIndex = 37;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(7, 88);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(115, 13);
+            this.label32.Size = new System.Drawing.Size(132, 16);
             this.label32.TabIndex = 36;
             this.label32.Text = "Producto Descripcion :";
             // 
@@ -717,21 +768,22 @@ namespace SerialPortApp
             this.TXT_PRO_PRODUCTID.Location = new System.Drawing.Point(148, 59);
             this.TXT_PRO_PRODUCTID.Name = "TXT_PRO_PRODUCTID";
             this.TXT_PRO_PRODUCTID.ReadOnly = true;
-            this.TXT_PRO_PRODUCTID.Size = new System.Drawing.Size(161, 20);
+            this.TXT_PRO_PRODUCTID.Size = new System.Drawing.Size(161, 23);
             this.TXT_PRO_PRODUCTID.TabIndex = 35;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(7, 62);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(65, 13);
+            this.label31.Size = new System.Drawing.Size(74, 16);
             this.label31.TabIndex = 34;
             this.label31.Text = "Product Id  :";
             // 
             // label30
             // 
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.Location = new System.Drawing.Point(3, 3);
             this.label30.Name = "label30";
@@ -1253,8 +1305,8 @@ namespace SerialPortApp
             this.TAB_PARAMETERS.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.TAB_PRODUCTS.ResumeLayout(false);
+            this.TAB_PRODUCTS.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -1341,7 +1393,7 @@ namespace SerialPortApp
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button BOT_OPEN_PORT;
         private System.Windows.Forms.Button BOT_CLOSE_PORT;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage TAB_PRODUCTS;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
@@ -1372,6 +1424,9 @@ namespace SerialPortApp
         private System.Windows.Forms.TextBox TXT_PRO_UNITSHOP;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.LinkLabel LINK_PRO_GUARDAR;
+        private System.Windows.Forms.LinkLabel LINK_PRO_ELIMINAR;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox TXT_PRO_INDEX;
     }
 }
 

@@ -21,7 +21,7 @@
         readonly Char[] CharBuffer = new Char[50];
 
         // Intanciar los controler de mis entidades.
-        readonly ProductsController prodductscontroller = new ProductsController();
+        readonly ProductsController productscontroller = new ProductsController();
         int EditModeProducts = 0;
         public Main()
         {
@@ -120,17 +120,24 @@
         }
         private void PRODUCTS_ADD()
         {
-            prodductscontroller.Add(CreateObjectProduct());
+            productscontroller.Add(CreateObjectProduct());
             EditModeProducts = 0;
+            MessageBox.Show("Se agrego el producto con exito.");
         }
         private void PRODUCTS_UPDATE()
         {
-            prodductscontroller.Update(CreateObjectProduct());
+            var item = CreateObjectProduct();
+            item.ProductID = Convert.ToInt32(TXT_PRO_INDEX.Text);
+            productscontroller.Update(item);
             EditModeProducts = 0;
+            MessageBox.Show("Se modifco el producto con exito.");
         }
         private void LINK_PRO_UPDATE_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             EditModeProducts = 2;
+            SetStatusTextboxProducts(false);
+            //DESACTIVO LOS CAMPOS QUE NO SE VAN A MODIFICAR
+            TXT_PRO_PRODUCTID.ReadOnly = true;
         }
         private void LINK_PRO_GUARDAR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -143,6 +150,8 @@
                     PRODUCTS_UPDATE();
                     break;
             }
+            SetStatusTextboxProducts(true);
+            MenuOptionsStatusProducts(true);
         }
         private void LINK_PRO_AGREGAR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -150,6 +159,8 @@
             LINK_PRO_AGREGAR.Enabled = false;
             LINK_PRO_UPDATE.Enabled = false;
             LINK_PRO_SEARCH.Enabled = false;
+            ClearFormTextboxProducts();
+
             EditModeProducts = 1;
         }
         private void SetStatusTextboxProducts(bool sw)
@@ -164,25 +175,85 @@
             TXT_PRO_UNITSHOP.ReadOnly = sw;
             TXT_PRO_PRODUCTID.Focus();
         }
-        #endregion
-
+        private void SetEntityToTextBoxs(Products product)
+        {
+            TXT_PRO_PRODUCTID.Text = product.CodePersonolize.ToString();
+            TXT_PRO_PRODUCT_NAME.Text = product.ProductName.ToString();
+            TXT_PRO_CATEGORY.Text = product.ProductCategory.ToString();
+            TXT_PRO_DEPARTAMENT.Text = product.Departament.ToString();
+            TXT_PRO_INGREDIENTS.Text = product.Ingredients.ToString();
+            TXT_PRO_UNITPRICE.Text = product.UnitPrice.ToString();
+            TXT_PRO_UNITSHOP.Text = product.UnitShop.ToString();
+            TXT_PRO_TAX.Text = product.Tax.ToString();
+            TXT_PRO_INDEX.Text = product.ProductID.ToString();
+        }
         private void LINK_PRO_SEARCH_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var milista = prodductscontroller.List();
-            SelecctionItems selectitems = new SelecctionItems();
-            selectitems.BannerTipoItems = "Productos";
-            selectitems.data = milista;
+            var milista = productscontroller.List();
+            SelecctionItems selectitems = new SelecctionItems
+            {
+                BannerTipoItems = "Productos",
+                data = milista
+            };
             selectitems.ShowDialog();
-            Products ReturnProduct = new Products();
-            ReturnProduct = (Products)selectitems.EntityReturn;
-            TXT_PRO_PRODUCTID.Text = ReturnProduct.ProductID.ToString();
-            TXT_PRO_PRODUCT_NAME.Text = ReturnProduct.ProductName.ToString();
-            TXT_PRO_CATEGORY.Text = ReturnProduct.ProductCategory.ToString();
-            TXT_PRO_DEPARTAMENT.Text = ReturnProduct.Departament.ToString();
-            TXT_PRO_INGREDIENTS.Text = ReturnProduct.Ingredients.ToString();
-            TXT_PRO_UNITPRICE.Text = ReturnProduct.UnitPrice.ToString();
-            TXT_PRO_UNITSHOP.Text = ReturnProduct.UnitShop.ToString();
-            TXT_PRO_TAX.Text = ReturnProduct.UnitShop.ToString();
+            if (selectitems.ProcessTask == false) 
+            {
+                return;
+            }
+            Products ReturnProduct = (Products)selectitems.EntityReturn;
+            SetEntityToTextBoxs(ReturnProduct);
+        }
+        #endregion
+
+        private void TAB_DATA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (TAB_DATA.SelectedTab.Text) 
+            {
+                case "PRODUCTOS":
+
+                    ClearFormTextboxProducts();
+                    MenuOptionsStatusProducts(true);
+                    break;
+            }
+        }
+        private void MenuOptionsStatusProducts(bool sw) 
+        {
+            LINK_PRO_AGREGAR.Enabled = sw;
+            LINK_PRO_GUARDAR.Enabled = sw;
+            LINK_PRO_SEARCH.Enabled = sw;
+            LINK_PRO_UPDATE.Enabled = sw;
+            LINK_PRO_ELIMINAR.Enabled = sw;
+        }
+        private void ClearFormTextboxProducts() 
+        {
+            TXT_PRO_PRODUCTID.Text = "";
+            TXT_PRO_PRODUCT_NAME.Text = "";
+            TXT_PRO_INGREDIENTS.Text = "";
+            TXT_PRO_DEPARTAMENT.Text = "";
+            TXT_PRO_UNITPRICE.Text = "";
+            TXT_PRO_TAX.Text = "";
+            TXT_PRO_CATEGORY.Text = "";
+            TXT_PRO_UNITSHOP.Text = "";
+            TXT_PRO_INDEX.Text = "";
+        }
+        private void LINK_PRO_ELIMINAR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (TXT_PRO_INDEX.Text == "") 
+            {
+                MessageBox.Show("Seleccione un producto primero.");
+                return;
+            }
+            DialogResult dr = MessageBox.Show("Esta seguro de que desea Eliminar de manera permanete este producto?",
+                      "Mood Test", MessageBoxButtons.YesNo);
+            switch (dr)
+            {
+                case DialogResult.Yes:
+                    productscontroller.Detele(Convert.ToInt32(TXT_PRO_INDEX.Text.Trim()));
+                    ClearFormTextboxProducts();
+                    break;
+                case DialogResult.No:
+                    break;
+            }
         }
     }
 }

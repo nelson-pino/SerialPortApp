@@ -14,6 +14,7 @@ namespace SerialPortApp.Forms
         public object data { get; set; } 
         public List<object> listdata;
         public object EntityReturn { get; set; }
+        public bool ProcessTask { get; set; }
 
         public SelecctionItems()
         {
@@ -22,6 +23,7 @@ namespace SerialPortApp.Forms
        
         private void SelecctionItems_Load(object sender, EventArgs e)
         {
+            ProcessTask = false;
             listdata = ((IEnumerable)data).Cast<object>().ToList();
             this.banner_tipo_clase.Text = BannerTipoItems;
             GRID_DATOS.DataSource = listdata;
@@ -99,6 +101,7 @@ namespace SerialPortApp.Forms
             string id = GRID_DATOS.Rows[e.RowIndex].Cells["CodePersonolize"].Value.ToString();
             EntityReturn  = listdata.Where(i => (i.GetType().GetProperty("CodePersonolize").
             GetValue(i) as string).Equals(id)).SingleOrDefault();
+            ProcessTask = true;
             this.Close();
         }
     }
