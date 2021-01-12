@@ -13,5 +13,6 @@ namespace SerialPortApp.Datalayer
         }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Products> Products { get; set; }
+        public DbSet<Batchs> Batchs { get; set; }
     }
 }

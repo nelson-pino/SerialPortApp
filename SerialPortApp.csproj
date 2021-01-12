@@ -56,6 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlers\BatchsController.cs" />
+    <Compile Include="Controlers\FormMainCode.cs" />
     <Compile Include="Controlers\ProductsController.cs" />
     <Compile Include="Datalayer\AppDbContextSqlServer.cs" />
     <Compile Include="Forms\SelecctionItems.cs">
@@ -71,11 +73,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101091910507_cambios-productos.cs" />
-    <Compile Include="Migrations\202101091910507_cambios-productos.designer.cs">
-      <DependentUpon>202101091910507_cambios-productos.cs</DependentUpon>
+    <Compile Include="Migrations\202101120051188_lotesact.cs" />
+    <Compile Include="Migrations\202101120051188_lotesact.designer.cs">
+      <DependentUpon>202101120051188_lotesact.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Batchs.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Program.cs" />
@@ -86,8 +89,8 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101091910507_cambios-productos.resx">
-      <DependentUpon>202101091910507_cambios-productos.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101120051188_lotesact.resx">
+      <DependentUpon>202101120051188_lotesact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

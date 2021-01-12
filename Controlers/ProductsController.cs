@@ -2,7 +2,6 @@
 {
     using SerialPortApp.Datalayer;
     using SerialPortApp.Models;
-    using System.Data.Entity;
     using System.Collections.Generic;
     using System.Linq;
 

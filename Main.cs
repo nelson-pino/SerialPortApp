@@ -22,7 +22,8 @@
 
         // Intanciar los controler de mis entidades.
         readonly ProductsController productscontroller = new ProductsController();
-        int EditModeProducts = 0;
+        readonly BatchsController batchcontroller = new BatchsController();
+        int EditModeProducts, EditModeBatchs = 0;
         public Main()
         {
             InitializeComponent();
@@ -33,11 +34,25 @@
         {
             LoadParameters();
             ConfigObjectSerialPortComm();
+        }
 
+        #region PORTCOMM_ZONE
+        private void ProcessData()
+        {
 
-
-
-
+        }
+        private void SetText(string text)
+        {
+            TXT_HYPER_TERMINAL.Text = Text;
+        }
+        private void GetDataPortSerialComm(object sender, SerialDataReceivedEventArgs e)
+        {
+            CommPort.Read(CharBuffer, 1, 49);
+            ProcessData();
+            if (InputData != String.Empty)
+            {
+                this.BeginInvoke(new SetTextCallBack(SetText), new object[] { InputData });
+            }
         }
         private void ConfigObjectSerialPortComm()
         {
@@ -50,26 +65,19 @@
             CommPort.ReceivedBytesThreshold = Convert.ToInt32(TXT_BAL_RECEIVEBYTES.Text);
         }
 
-
-        private void GetDataPortSerialComm(object sender, SerialDataReceivedEventArgs e)
+        #endregion
+        #region FORMS_ZONE
+        private void TAB_DATA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CommPort.Read(CharBuffer, 1, 49);
-            ProcessData();
-            if (InputData != String.Empty)
+            switch (TAB_DATA.SelectedTab.Text)
             {
-                this.BeginInvoke(new SetTextCallBack(SetText), new object[] { InputData });
+                case "PRODUCTOS":
+
+                    ClearFormTextboxProducts();
+                    MenuOptionsStatusProducts(true);
+                    break;
             }
         }
-        private void SetText(string text)
-        {
-            TXT_HYPER_TERMINAL.Text = Text;
-        }
-        private void ProcessData()
-        {
-
-        }
-
-        #region FORMS_ZONE
         private void BOT_OPEN_PORT_Click(object sender, EventArgs e)
         {
             CommPort.Open();
@@ -196,27 +204,15 @@
                 data = milista
             };
             selectitems.ShowDialog();
-            if (selectitems.ProcessTask == false) 
+            if (selectitems.ProcessTask == false)
             {
                 return;
             }
             Products ReturnProduct = (Products)selectitems.EntityReturn;
             SetEntityToTextBoxs(ReturnProduct);
-        }
-        #endregion
 
-        private void TAB_DATA_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (TAB_DATA.SelectedTab.Text) 
-            {
-                case "PRODUCTOS":
-
-                    ClearFormTextboxProducts();
-                    MenuOptionsStatusProducts(true);
-                    break;
-            }
         }
-        private void MenuOptionsStatusProducts(bool sw) 
+        private void MenuOptionsStatusProducts(bool sw)
         {
             LINK_PRO_AGREGAR.Enabled = sw;
             LINK_PRO_GUARDAR.Enabled = sw;
@@ -224,7 +220,7 @@
             LINK_PRO_UPDATE.Enabled = sw;
             LINK_PRO_ELIMINAR.Enabled = sw;
         }
-        private void ClearFormTextboxProducts() 
+        private void ClearFormTextboxProducts()
         {
             TXT_PRO_PRODUCTID.Text = "";
             TXT_PRO_PRODUCT_NAME.Text = "";
@@ -238,7 +234,7 @@
         }
         private void LINK_PRO_ELIMINAR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (TXT_PRO_INDEX.Text == "") 
+            if (TXT_PRO_INDEX.Text == "")
             {
                 MessageBox.Show("Seleccione un producto primero.");
                 return;
@@ -254,6 +250,91 @@
                 case DialogResult.No:
                     break;
             }
+        }
+        #endregion
+        #region BATCHES_ZONE
+
+        private void LINK_BAT_AGREGAR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SetStatusTextboxBatchs(false);
+            LINK_BAT_AGREGAR.Enabled = false;
+            LINK_BAT_UPDATE.Enabled = false;
+            LINK_BAT_SEARCH.Enabled = false;
+            LINK_BAT_ELIMINAR.Enabled = false;
+            LINK_BAT_CLOSE.Enabled = false;
+            ClearFormTextboxBatch();
+            EditModeBatchs = 1;
+        }
+        private void ClearFormTextboxBatch()
+        {
+            TXT_BAT_NUMERO.Text = "";
+            TXT_BAT_PERSON.Text = "";
+            TXT_BAT_DESCRIPTION.Text = "";
+            TXT_BAT_DATE.Text = "";
+        }
+        private void SetStatusTextboxBatchs(bool sw)
+        {
+            TXT_BAT_NUMERO.ReadOnly = sw;
+            TXT_BAT_DATE.Enabled = !sw;
+            TXT_BAT_DESCRIPTION.ReadOnly = sw;
+            TXT_BAT_PERSON.ReadOnly = sw;
+        }
+        #endregion
+
+
+        private void LINK_BAT_GRABAR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            switch (EditModeBatchs)
+            {
+                case 1:
+                    BATCHES_ADD();
+                    break;
+                case 2:
+                    BATCHES_UPDATE();
+                    break;
+            }
+            SetStatusTextboxBatches(true);
+            MenuOptionsStatusBatches(true);
+        }
+        private void MenuOptionsStatusBatches(bool sw) 
+        {
+            LINK_BAT_AGREGAR.Enabled = sw;
+            LINK_BAT_CLOSE.Enabled = sw;
+            LINK_BAT_ELIMINAR.Enabled = sw;
+            LINK_BAT_GRABAR.Enabled = sw;
+            LINK_BAT_SEARCH.Enabled = sw;
+            LINK_BAT_UPDATE.Enabled = sw;
+        }
+        private void SetStatusTextboxBatches(bool sw) 
+        {
+            TXT_BAT_NUMERO.ReadOnly = sw;
+            TXT_BAT_PERSON.ReadOnly = sw;
+            TXT_BAT_DESCRIPTION.ReadOnly = sw;
+            TXT_BAT_DATE.Enabled = !sw;
+        }
+        private void BATCHES_ADD() 
+        {
+            batchcontroller.Add(CreateObjectBatch());
+            EditModeBatchs = 0;
+            MessageBox.Show("Se agrego un batch con exito.");
+
+        }
+        private Batchs CreateObjectBatch() 
+        {
+            Batchs batch = new Batchs
+            {
+                BatchNumber = TXT_BAT_NUMERO.Text,
+                DateOpen = Convert.ToDateTime(TXT_BAT_DATE.Text),
+                DateClose = Convert.ToDateTime(TXT_BAT_DATE.Text),
+                Person = TXT_BAT_PERSON.Text,
+                BatchStatus = false,
+                Description = TXT_BAT_DESCRIPTION.Text
+            };
+            return batch;
+        }
+        private void BATCHES_UPDATE() 
+        {
+        
         }
     }
 }

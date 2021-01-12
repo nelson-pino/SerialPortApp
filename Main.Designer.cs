@@ -94,6 +94,29 @@ namespace SerialPortApp
             this.TXT_PRO_PRODUCTID = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.TAB_BATCH = new System.Windows.Forms.TabPage();
+            this.TXT_BAT_PERSON = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.TXT_BAT_DATECLOSE = new System.Windows.Forms.DateTimePicker();
+            this.label46 = new System.Windows.Forms.Label();
+            this.TXT_BAT_DATE = new System.Windows.Forms.DateTimePicker();
+            this.LINK_BAT_CLOSE = new System.Windows.Forms.LinkLabel();
+            this.RAD_BAT_CLOSE = new System.Windows.Forms.RadioButton();
+            this.RAD_BAT_OPEN = new System.Windows.Forms.RadioButton();
+            this.label45 = new System.Windows.Forms.Label();
+            this.TXT_BAT_INDEX = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.TXT_BAT_DESCRIPTION = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.TXT_BAT_NUMERO = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.LINK_BAT_ELIMINAR = new System.Windows.Forms.LinkLabel();
+            this.LINK_BAT_GRABAR = new System.Windows.Forms.LinkLabel();
+            this.LINK_BAT_SEARCH = new System.Windows.Forms.LinkLabel();
+            this.LINK_BAT_UPDATE = new System.Windows.Forms.LinkLabel();
+            this.LINK_BAT_AGREGAR = new System.Windows.Forms.LinkLabel();
+            this.label40 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_NumeroTickets = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -146,6 +169,7 @@ namespace SerialPortApp
             this.TAB_PARAMETERS.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.TAB_PRODUCTS.SuspendLayout();
+            this.TAB_BATCH.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,6 +178,7 @@ namespace SerialPortApp
             this.TAB_DATA.Controls.Add(this.TAB_PARAMETERS);
             this.TAB_DATA.Controls.Add(this.tabPage2);
             this.TAB_DATA.Controls.Add(this.TAB_PRODUCTS);
+            this.TAB_DATA.Controls.Add(this.TAB_BATCH);
             this.TAB_DATA.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TAB_DATA.Location = new System.Drawing.Point(8, 291);
             this.TAB_DATA.Name = "TAB_DATA";
@@ -792,6 +817,259 @@ namespace SerialPortApp
             this.label30.Text = "DATOS DE LOS PRODUCTOS";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // TAB_BATCH
+            // 
+            this.TAB_BATCH.Controls.Add(this.TXT_BAT_PERSON);
+            this.TAB_BATCH.Controls.Add(this.label47);
+            this.TAB_BATCH.Controls.Add(this.TXT_BAT_DATECLOSE);
+            this.TAB_BATCH.Controls.Add(this.label46);
+            this.TAB_BATCH.Controls.Add(this.TXT_BAT_DATE);
+            this.TAB_BATCH.Controls.Add(this.LINK_BAT_CLOSE);
+            this.TAB_BATCH.Controls.Add(this.RAD_BAT_CLOSE);
+            this.TAB_BATCH.Controls.Add(this.RAD_BAT_OPEN);
+            this.TAB_BATCH.Controls.Add(this.label45);
+            this.TAB_BATCH.Controls.Add(this.TXT_BAT_INDEX);
+            this.TAB_BATCH.Controls.Add(this.label44);
+            this.TAB_BATCH.Controls.Add(this.TXT_BAT_DESCRIPTION);
+            this.TAB_BATCH.Controls.Add(this.label43);
+            this.TAB_BATCH.Controls.Add(this.label42);
+            this.TAB_BATCH.Controls.Add(this.TXT_BAT_NUMERO);
+            this.TAB_BATCH.Controls.Add(this.label41);
+            this.TAB_BATCH.Controls.Add(this.LINK_BAT_ELIMINAR);
+            this.TAB_BATCH.Controls.Add(this.LINK_BAT_GRABAR);
+            this.TAB_BATCH.Controls.Add(this.LINK_BAT_SEARCH);
+            this.TAB_BATCH.Controls.Add(this.LINK_BAT_UPDATE);
+            this.TAB_BATCH.Controls.Add(this.LINK_BAT_AGREGAR);
+            this.TAB_BATCH.Controls.Add(this.label40);
+            this.TAB_BATCH.Location = new System.Drawing.Point(4, 25);
+            this.TAB_BATCH.Name = "TAB_BATCH";
+            this.TAB_BATCH.Padding = new System.Windows.Forms.Padding(3);
+            this.TAB_BATCH.Size = new System.Drawing.Size(756, 286);
+            this.TAB_BATCH.TabIndex = 4;
+            this.TAB_BATCH.Text = "BATCH";
+            this.TAB_BATCH.UseVisualStyleBackColor = true;
+            // 
+            // TXT_BAT_PERSON
+            // 
+            this.TXT_BAT_PERSON.Location = new System.Drawing.Point(131, 150);
+            this.TXT_BAT_PERSON.Name = "TXT_BAT_PERSON";
+            this.TXT_BAT_PERSON.ReadOnly = true;
+            this.TXT_BAT_PERSON.Size = new System.Drawing.Size(161, 23);
+            this.TXT_BAT_PERSON.TabIndex = 77;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(7, 153);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(73, 16);
+            this.label47.TabIndex = 76;
+            this.label47.Text = "CONTACTO :";
+            // 
+            // TXT_BAT_DATECLOSE
+            // 
+            this.TXT_BAT_DATECLOSE.Enabled = false;
+            this.TXT_BAT_DATECLOSE.Location = new System.Drawing.Point(131, 208);
+            this.TXT_BAT_DATECLOSE.Name = "TXT_BAT_DATECLOSE";
+            this.TXT_BAT_DATECLOSE.Size = new System.Drawing.Size(258, 23);
+            this.TXT_BAT_DATECLOSE.TabIndex = 75;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(7, 208);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(91, 16);
+            this.label46.TabIndex = 74;
+            this.label46.Text = "FECHA CIERRE :";
+            // 
+            // TXT_BAT_DATE
+            // 
+            this.TXT_BAT_DATE.Enabled = false;
+            this.TXT_BAT_DATE.Location = new System.Drawing.Point(131, 92);
+            this.TXT_BAT_DATE.Name = "TXT_BAT_DATE";
+            this.TXT_BAT_DATE.Size = new System.Drawing.Size(258, 23);
+            this.TXT_BAT_DATE.TabIndex = 73;
+            // 
+            // LINK_BAT_CLOSE
+            // 
+            this.LINK_BAT_CLOSE.AutoSize = true;
+            this.LINK_BAT_CLOSE.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_BAT_CLOSE.Location = new System.Drawing.Point(335, 34);
+            this.LINK_BAT_CLOSE.Name = "LINK_BAT_CLOSE";
+            this.LINK_BAT_CLOSE.Size = new System.Drawing.Size(54, 17);
+            this.LINK_BAT_CLOSE.TabIndex = 72;
+            this.LINK_BAT_CLOSE.TabStop = true;
+            this.LINK_BAT_CLOSE.Text = "CERRAR";
+            // 
+            // RAD_BAT_CLOSE
+            // 
+            this.RAD_BAT_CLOSE.AutoSize = true;
+            this.RAD_BAT_CLOSE.Enabled = false;
+            this.RAD_BAT_CLOSE.Location = new System.Drawing.Point(242, 260);
+            this.RAD_BAT_CLOSE.Name = "RAD_BAT_CLOSE";
+            this.RAD_BAT_CLOSE.Size = new System.Drawing.Size(69, 20);
+            this.RAD_BAT_CLOSE.TabIndex = 71;
+            this.RAD_BAT_CLOSE.TabStop = true;
+            this.RAD_BAT_CLOSE.Text = "Cerrado";
+            this.RAD_BAT_CLOSE.UseVisualStyleBackColor = true;
+            // 
+            // RAD_BAT_OPEN
+            // 
+            this.RAD_BAT_OPEN.AutoSize = true;
+            this.RAD_BAT_OPEN.Enabled = false;
+            this.RAD_BAT_OPEN.Location = new System.Drawing.Point(169, 260);
+            this.RAD_BAT_OPEN.Name = "RAD_BAT_OPEN";
+            this.RAD_BAT_OPEN.Size = new System.Drawing.Size(67, 20);
+            this.RAD_BAT_OPEN.TabIndex = 70;
+            this.RAD_BAT_OPEN.TabStop = true;
+            this.RAD_BAT_OPEN.Text = "Abierto";
+            this.RAD_BAT_OPEN.UseVisualStyleBackColor = true;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(9, 262);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(56, 16);
+            this.label45.TabIndex = 69;
+            this.label45.Text = "STATUS :";
+            // 
+            // TXT_BAT_INDEX
+            // 
+            this.TXT_BAT_INDEX.Location = new System.Drawing.Point(131, 179);
+            this.TXT_BAT_INDEX.Name = "TXT_BAT_INDEX";
+            this.TXT_BAT_INDEX.ReadOnly = true;
+            this.TXT_BAT_INDEX.Size = new System.Drawing.Size(161, 23);
+            this.TXT_BAT_INDEX.TabIndex = 68;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(9, 182);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(47, 16);
+            this.label44.TabIndex = 67;
+            this.label44.Text = "INDEX :";
+            // 
+            // TXT_BAT_DESCRIPTION
+            // 
+            this.TXT_BAT_DESCRIPTION.Location = new System.Drawing.Point(131, 121);
+            this.TXT_BAT_DESCRIPTION.Name = "TXT_BAT_DESCRIPTION";
+            this.TXT_BAT_DESCRIPTION.ReadOnly = true;
+            this.TXT_BAT_DESCRIPTION.Size = new System.Drawing.Size(347, 23);
+            this.TXT_BAT_DESCRIPTION.TabIndex = 66;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(6, 124);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(89, 16);
+            this.label43.TabIndex = 65;
+            this.label43.Text = "DESCRIPCION  :";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(6, 95);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(50, 16);
+            this.label42.TabIndex = 63;
+            this.label42.Text = "FECHA :";
+            // 
+            // TXT_BAT_NUMERO
+            // 
+            this.TXT_BAT_NUMERO.Location = new System.Drawing.Point(131, 63);
+            this.TXT_BAT_NUMERO.Name = "TXT_BAT_NUMERO";
+            this.TXT_BAT_NUMERO.ReadOnly = true;
+            this.TXT_BAT_NUMERO.Size = new System.Drawing.Size(161, 23);
+            this.TXT_BAT_NUMERO.TabIndex = 62;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(6, 66);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(119, 16);
+            this.label41.TabIndex = 61;
+            this.label41.Text = "NUMERO DE BACTH :";
+            // 
+            // LINK_BAT_ELIMINAR
+            // 
+            this.LINK_BAT_ELIMINAR.AutoSize = true;
+            this.LINK_BAT_ELIMINAR.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_BAT_ELIMINAR.Location = new System.Drawing.Point(210, 34);
+            this.LINK_BAT_ELIMINAR.Name = "LINK_BAT_ELIMINAR";
+            this.LINK_BAT_ELIMINAR.Size = new System.Drawing.Size(60, 17);
+            this.LINK_BAT_ELIMINAR.TabIndex = 60;
+            this.LINK_BAT_ELIMINAR.TabStop = true;
+            this.LINK_BAT_ELIMINAR.Text = "ELIMINAR";
+            // 
+            // LINK_BAT_GRABAR
+            // 
+            this.LINK_BAT_GRABAR.AutoSize = true;
+            this.LINK_BAT_GRABAR.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_BAT_GRABAR.Location = new System.Drawing.Point(76, 34);
+            this.LINK_BAT_GRABAR.Name = "LINK_BAT_GRABAR";
+            this.LINK_BAT_GRABAR.Size = new System.Drawing.Size(54, 17);
+            this.LINK_BAT_GRABAR.TabIndex = 59;
+            this.LINK_BAT_GRABAR.TabStop = true;
+            this.LINK_BAT_GRABAR.Text = "GRABAR";
+            this.LINK_BAT_GRABAR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_BAT_GRABAR_LinkClicked);
+            // 
+            // LINK_BAT_SEARCH
+            // 
+            this.LINK_BAT_SEARCH.AutoSize = true;
+            this.LINK_BAT_SEARCH.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_BAT_SEARCH.Location = new System.Drawing.Point(276, 34);
+            this.LINK_BAT_SEARCH.Name = "LINK_BAT_SEARCH";
+            this.LINK_BAT_SEARCH.Size = new System.Drawing.Size(53, 17);
+            this.LINK_BAT_SEARCH.TabIndex = 58;
+            this.LINK_BAT_SEARCH.TabStop = true;
+            this.LINK_BAT_SEARCH.Text = "BUSCAR";
+            // 
+            // LINK_BAT_UPDATE
+            // 
+            this.LINK_BAT_UPDATE.AutoSize = true;
+            this.LINK_BAT_UPDATE.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_BAT_UPDATE.Location = new System.Drawing.Point(136, 34);
+            this.LINK_BAT_UPDATE.Name = "LINK_BAT_UPDATE";
+            this.LINK_BAT_UPDATE.Size = new System.Drawing.Size(68, 17);
+            this.LINK_BAT_UPDATE.TabIndex = 57;
+            this.LINK_BAT_UPDATE.TabStop = true;
+            this.LINK_BAT_UPDATE.Text = "MODIFICAR";
+            // 
+            // LINK_BAT_AGREGAR
+            // 
+            this.LINK_BAT_AGREGAR.AutoSize = true;
+            this.LINK_BAT_AGREGAR.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LINK_BAT_AGREGAR.Location = new System.Drawing.Point(9, 34);
+            this.LINK_BAT_AGREGAR.Name = "LINK_BAT_AGREGAR";
+            this.LINK_BAT_AGREGAR.Size = new System.Drawing.Size(61, 17);
+            this.LINK_BAT_AGREGAR.TabIndex = 56;
+            this.LINK_BAT_AGREGAR.TabStop = true;
+            this.LINK_BAT_AGREGAR.Text = "AGREGAR";
+            this.LINK_BAT_AGREGAR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_BAT_AGREGAR_LinkClicked);
+            // 
+            // label40
+            // 
+            this.label40.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Location = new System.Drawing.Point(6, 3);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(320, 31);
+            this.label40.TabIndex = 19;
+            this.label40.Text = "DATOS DE LOS BACTHES";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1307,6 +1585,8 @@ namespace SerialPortApp
             this.tabPage2.PerformLayout();
             this.TAB_PRODUCTS.ResumeLayout(false);
             this.TAB_PRODUCTS.PerformLayout();
+            this.TAB_BATCH.ResumeLayout(false);
+            this.TAB_BATCH.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -1427,6 +1707,29 @@ namespace SerialPortApp
         private System.Windows.Forms.LinkLabel LINK_PRO_ELIMINAR;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox TXT_PRO_INDEX;
+        private System.Windows.Forms.TabPage TAB_BATCH;
+        private System.Windows.Forms.TextBox TXT_BAT_INDEX;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox TXT_BAT_DESCRIPTION;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox TXT_BAT_NUMERO;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.LinkLabel LINK_BAT_ELIMINAR;
+        private System.Windows.Forms.LinkLabel LINK_BAT_GRABAR;
+        private System.Windows.Forms.LinkLabel LINK_BAT_SEARCH;
+        private System.Windows.Forms.LinkLabel LINK_BAT_UPDATE;
+        private System.Windows.Forms.LinkLabel LINK_BAT_AGREGAR;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.RadioButton RAD_BAT_CLOSE;
+        private System.Windows.Forms.RadioButton RAD_BAT_OPEN;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.LinkLabel LINK_BAT_CLOSE;
+        private System.Windows.Forms.DateTimePicker TXT_BAT_DATE;
+        private System.Windows.Forms.DateTimePicker TXT_BAT_DATECLOSE;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox TXT_BAT_PERSON;
+        private System.Windows.Forms.Label label47;
     }
 }
 
