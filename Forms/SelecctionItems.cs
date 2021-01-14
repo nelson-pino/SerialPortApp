@@ -11,7 +11,7 @@ namespace SerialPortApp.Forms
     public partial class SelecctionItems : Form
     {
         public string BannerTipoItems { get; set; }
-        public object data { get; set; } 
+        public object Data { get; set; } 
         public List<object> listdata;
         public object EntityReturn { get; set; }
         public bool ProcessTask { get; set; }
@@ -24,7 +24,7 @@ namespace SerialPortApp.Forms
         private void SelecctionItems_Load(object sender, EventArgs e)
         {
             ProcessTask = false;
-            listdata = ((IEnumerable)data).Cast<object>().ToList();
+            listdata = ((IEnumerable)Data).Cast<object>().ToList();
             this.banner_tipo_clase.Text = BannerTipoItems;
             GRID_DATOS.DataSource = listdata;
             CountRecordData(listdata);
@@ -32,9 +32,13 @@ namespace SerialPortApp.Forms
         }
         private void ConfigForms() 
         {
-            if (data.GetType().ToString().Contains("Products"))
+            if (Data.GetType().ToString().Contains("Products"))
             {
                 FormatScreenProducts();
+            }
+            if (Data.GetType().ToString().Contains("Batchs")) 
+            {
+                FormatScreenBatches();
             }
         }
         private void CountRecordData(List<object> lista) 
@@ -64,6 +68,38 @@ namespace SerialPortApp.Forms
             filtro2.Text = "Nombre del Producto";
             filtro3.Visible = true;
             filtro3.Text = "Categoria";
+          
+
+
+        }
+        private void FormatScreenBatches() 
+        {
+            GRID_DATOS.Columns["Id"].Visible = false;
+            GRID_DATOS.Columns["DateClose"].Visible = false;
+            GRID_DATOS.Columns["BatchNumber"].HeaderText = "Numero";
+            GRID_DATOS.Columns["BatchNumber"].Width = 60;
+            GRID_DATOS.Columns["DateOpen"].DisplayIndex = 2;
+            GRID_DATOS.Columns["DateOpen"].HeaderText = "Fecha Creacion";
+            GRID_DATOS.Columns["DateOpen"].Width = 60;
+            GRID_DATOS.Columns["Description"].HeaderText = "Descripcion del Lote";
+            GRID_DATOS.Columns["Description"].Width = 123;
+            GRID_DATOS.Columns["BatchStatus"].HeaderText = "Cerrado";
+            GRID_DATOS.Columns["BatchStatus"].Width = 60;
+            // CONTROLES DE FECHA
+            LABEL_DESDE.Visible = true;
+            LABEL_HASTA.Visible = true;
+            TXT_DESDE.Visible = true;
+            TXT_HASTA.Visible = true;
+            // Configurar los filtros 
+            filtro1.Text = "Numero de Lote";
+            filtro2.Text = "Fecha Creacion";
+            filtro3.Text = "Persona Contacto";
+            filtro1.Visible = true;
+            filtro2.Visible = true;
+            filtro3.Visible = true;
+
+
+
         }
         private void BOT_BUSCAR_Click(object sender, EventArgs e)
         {

@@ -1035,6 +1035,7 @@ namespace SerialPortApp
             this.LINK_BAT_SEARCH.TabIndex = 58;
             this.LINK_BAT_SEARCH.TabStop = true;
             this.LINK_BAT_SEARCH.Text = "BUSCAR";
+            this.LINK_BAT_SEARCH.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LINK_BAT_SEARCH_LinkClicked);
             // 
             // LINK_BAT_UPDATE
             // 

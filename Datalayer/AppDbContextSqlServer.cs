@@ -8,7 +8,7 @@ namespace SerialPortApp.Datalayer
     {
 
         public AppDbContextSqlServer()
-            : base(Properties.Resources.CONNECTION_STRING_SQLSERVER)
+            : base("name=LocalDbContext")
         {
         }
         public DbSet<Ticket> Tickets { get; set; }

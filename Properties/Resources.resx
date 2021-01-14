@@ -150,6 +150,9 @@
   <data name="INSTANCE_SQLSERVER" xml:space="preserve">
     <value>172.23.24.82\SQLSERVER</value>
   </data>
+  <data name="LOCAL_DB" xml:space="preserve">
+    <value>Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=DbSerialPortApp;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\Catalog=DbSerialPortApp;Integrated .mdf" providerName="System.Data.SqlClient"</value>
+  </data>
   <data name="PASSWORD_SQL" xml:space="preserve">
     <value>Jossycar5%</value>
   </data>

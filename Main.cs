@@ -183,7 +183,7 @@
             TXT_PRO_UNITSHOP.ReadOnly = sw;
             TXT_PRO_PRODUCTID.Focus();
         }
-        private void SetEntityToTextBoxs(Products product)
+        private void SetEntityToTextBoxsProducts(Products product)
         {
             TXT_PRO_PRODUCTID.Text = product.CodePersonolize.ToString();
             TXT_PRO_PRODUCT_NAME.Text = product.ProductName.ToString();
@@ -200,8 +200,8 @@
             var milista = productscontroller.List();
             SelecctionItems selectitems = new SelecctionItems
             {
-                BannerTipoItems = "Productos",
-                data = milista
+                BannerTipoItems = "PRODUCTOS",
+                Data = milista
             };
             selectitems.ShowDialog();
             if (selectitems.ProcessTask == false)
@@ -209,8 +209,7 @@
                 return;
             }
             Products ReturnProduct = (Products)selectitems.EntityReturn;
-            SetEntityToTextBoxs(ReturnProduct);
-
+            SetEntityToTextBoxsProducts(ReturnProduct);
         }
         private void MenuOptionsStatusProducts(bool sw)
         {
@@ -332,6 +331,29 @@
             };
             return batch;
         }
+
+        private void LINK_BAT_SEARCH_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var listbatchs = batchcontroller.List();
+            SelecctionItems selectitems = new SelecctionItems
+            {
+                BannerTipoItems = "Lotes",
+                Data = listbatchs
+            };
+            selectitems.ShowDialog();
+            if (selectitems.ProcessTask == false)
+            {
+                return;
+            }
+            Batchs ReturnBatch = (Batchs)selectitems.EntityReturn;
+            SetEntityToTextBoxsBatchs(ReturnBatch);
+
+        }
+        private Batchs SetEntityToTextBoxsBatchs(Batchs batch) 
+        {
+            return batch;
+        }
+
         private void BATCHES_UPDATE() 
         {
         

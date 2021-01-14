@@ -160,6 +160,15 @@ namespace SerialPortApp.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=DbSerialPortApp;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\Catalog=DbSerialPortApp;Integrated .mdf&quot; providerName=&quot;System.Data.SqlClient&quot;.
+        /// </summary>
+        internal static string LOCAL_DB {
+            get {
+                return ResourceManager.GetString("LOCAL_DB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Jossycar5%.
         /// </summary>
         internal static string PASSWORD_SQL {

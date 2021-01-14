@@ -43,6 +43,10 @@ namespace SerialPortApp.Forms
             this.NUM_REGISTROS = new System.Windows.Forms.Label();
             this.BOT_BUSCAR = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.TXT_DESDE = new System.Windows.Forms.DateTimePicker();
+            this.TXT_HASTA = new System.Windows.Forms.DateTimePicker();
+            this.LABEL_DESDE = new System.Windows.Forms.Label();
+            this.LABEL_HASTA = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GRID_DATOS)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -90,7 +94,7 @@ namespace SerialPortApp.Forms
             this.GRID_DATOS.Location = new System.Drawing.Point(12, 151);
             this.GRID_DATOS.Name = "GRID_DATOS";
             this.GRID_DATOS.ReadOnly = true;
-            this.GRID_DATOS.RowHeadersWidth = 33;
+            this.GRID_DATOS.RowHeadersWidth = 30;
             this.GRID_DATOS.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GRID_DATOS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GRID_DATOS.Size = new System.Drawing.Size(436, 235);
@@ -200,11 +204,53 @@ namespace SerialPortApp.Forms
             this.label1.TabIndex = 8;
             this.label1.Text = "BUSCAR POR :";
             // 
+            // TXT_DESDE
+            // 
+            this.TXT_DESDE.Location = new System.Drawing.Point(28, 450);
+            this.TXT_DESDE.Name = "TXT_DESDE";
+            this.TXT_DESDE.Size = new System.Drawing.Size(200, 20);
+            this.TXT_DESDE.TabIndex = 9;
+            this.TXT_DESDE.Visible = false;
+            // 
+            // TXT_HASTA
+            // 
+            this.TXT_HASTA.Location = new System.Drawing.Point(28, 494);
+            this.TXT_HASTA.Name = "TXT_HASTA";
+            this.TXT_HASTA.Size = new System.Drawing.Size(200, 20);
+            this.TXT_HASTA.TabIndex = 10;
+            this.TXT_HASTA.Visible = false;
+            // 
+            // LABEL_DESDE
+            // 
+            this.LABEL_DESDE.AutoSize = true;
+            this.LABEL_DESDE.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LABEL_DESDE.Location = new System.Drawing.Point(25, 431);
+            this.LABEL_DESDE.Name = "LABEL_DESDE";
+            this.LABEL_DESDE.Size = new System.Drawing.Size(51, 16);
+            this.LABEL_DESDE.TabIndex = 11;
+            this.LABEL_DESDE.Text = "DESDE :";
+            this.LABEL_DESDE.Visible = false;
+            // 
+            // LABEL_HASTA
+            // 
+            this.LABEL_HASTA.AutoSize = true;
+            this.LABEL_HASTA.Font = new System.Drawing.Font("HP Simplified", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LABEL_HASTA.Location = new System.Drawing.Point(25, 475);
+            this.LABEL_HASTA.Name = "LABEL_HASTA";
+            this.LABEL_HASTA.Size = new System.Drawing.Size(51, 16);
+            this.LABEL_HASTA.TabIndex = 12;
+            this.LABEL_HASTA.Text = "HASTA :";
+            this.LABEL_HASTA.Visible = false;
+            // 
             // SelecctionItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 529);
+            this.Controls.Add(this.LABEL_HASTA);
+            this.Controls.Add(this.LABEL_DESDE);
+            this.Controls.Add(this.TXT_HASTA);
+            this.Controls.Add(this.TXT_DESDE);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BOT_BUSCAR);
             this.Controls.Add(this.NUM_REGISTROS);
@@ -240,5 +286,9 @@ namespace SerialPortApp.Forms
         private System.Windows.Forms.RadioButton filtro3;
         private System.Windows.Forms.Button BOT_BUSCAR;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker TXT_DESDE;
+        private System.Windows.Forms.DateTimePicker TXT_HASTA;
+        private System.Windows.Forms.Label LABEL_DESDE;
+        private System.Windows.Forms.Label LABEL_HASTA;
     }
 }

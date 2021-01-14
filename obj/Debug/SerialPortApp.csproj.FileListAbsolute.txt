@@ -13,5 +13,7 @@ C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\EntityFramework.xml
 C:\Users\nelson\Documents\Code\SerialPortApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csproj.CopyComplete
 C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Forms.SelecctionItems.resources
-C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csprojAssemblyReference.cache
-C:\Users\nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Migrations.lotesact.resources
+C:\Users\Nelson\Documents\Code\SerialPortApp\bin\Debug\DbSerialPortApp.mdf
+C:\Users\Nelson\Documents\Code\SerialPortApp\bin\Debug\DbSerialPortApp_log.ldf
+C:\Users\Nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.Migrations.localdb_init.resources
+C:\Users\Nelson\Documents\Code\SerialPortApp\obj\Debug\SerialPortApp.csprojAssemblyReference.cache
